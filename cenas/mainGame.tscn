@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://cenas/mainGame.gd" type="Script" id=1]
+[ext_resource path="res://packed/Ambiente.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed/UI_in_game.tscn" type="PackedScene" id=3]
+[ext_resource path="res://packed/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://packed/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=6]
+[ext_resource path="res://cenas/Pause.gd" type="Script" id=7]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Timer
+
+func _ready():
+	connect(\"timeout\",get_parent(),\"_pontuacao\");
+
+func _process(delta):
+	pass"
+
+[node name="mainGame" type="Node2D"]
+
+pause_mode = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Transform" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ 0.284847, -23.4013 ]
+}
+
+[node name="Ambiente" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 72, 128 )
+z_index = -1
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="PontuacaoPainel" type="ParallaxBackground" parent="." index="1"]
+
+editor/display_folded = true
+layer = 2
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 72, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 168, 0 )
+scroll_ignore_camera_zoom = false
+_sections_unfolded = [ "Scroll" ]
+
+[node name="PanelContainer" parent="PontuacaoPainel" index="0" instance=ExtResource( 3 )]
+
+[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+position = Vector2( 72, 200 )
+contacts_reported = 1
+contact_monitor = true
+_sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Transform" ]
+
+[node name="Pontuacao" type="Timer" parent="Player" index="2"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = true
+script = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="3"]
+
+position = Vector2( -72, -200 )
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -24
+limit_top = -10000000
+limit_right = 168
+limit_bottom = 256
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit", "Smoothing" ]
+
+[node name="Spawner" parent="." index="3" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+
+[node name="Caminhos" parent="Spawner" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 72, 64 )
+
+[node name="Pause" type="Node" parent="." index="4"]
+
+pause_mode = 2
+script = ExtResource( 7 )
+_sections_unfolded = [ "Pause" ]
+
+

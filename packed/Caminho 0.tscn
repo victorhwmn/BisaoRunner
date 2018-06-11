@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://packed/Caminho 0.gd" type="Script" id=1]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1.87332, 1.36557, 0, 0, 0, 0, -2.59653, 280.562 )
+}
+
+[node name="Caminho 0" type="Path2D"]
+
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ 220.231 ]
+}
+
+

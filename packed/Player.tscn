@@ -1,0 +1,150 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://packed/Player.gd" type="Script" id=1]
+[ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://packed/+250.gd" type="Script" id=3]
+[ext_resource path="res://recursos/Bision.png" type="Texture" id=4]
+
+[sub_resource type="ParticlesMaterial" id=1]
+
+render_priority = 1
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_align_y = false
+flag_rotate_y = true
+flag_disable_z = true
+spread = 100.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 25.0
+initial_velocity_random = 0.0
+angular_velocity = 2.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 4.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 10.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 7.0
+scale_random = 0.0
+color = Color( 1, 0.960938, 0, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 10.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Flags", "Gravity", "Initial Velocity", "Scale", "Spread", "Trail" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 14.8328
+height = 4.37591
+
+[node name="Player" type="RigidBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 3
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Applied Forces", "Linear" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Particles2D" type="Particles2D" parent="." index="0"]
+
+modulate = Color( 1, 1, 1, 0 )
+z_index = 1
+emitting = true
+amount = 10
+lifetime = 2.0
+one_shot = true
+preprocess = 0.0
+speed_scale = 5.0
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 0
+fract_delta = false
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 1 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Pause", "Process Material", "Textures", "Time", "Visibility", "Z Index" ]
+
+[node name="+250" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -14.0
+margin_top = -48.0
+margin_right = 58.0
+margin_bottom = 16.0
+rect_rotation = -0.754158
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.956241, 0.972656, 0.672501, 1 )
+custom_colors/font_color_shadow = Color( 0.167969, 0.0170593, 0.0170593, 1 )
+text = "250"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Margin", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( 0, 10 )
+z_index = 1
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 4 )
+
+

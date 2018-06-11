@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Ambiente.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://packed/AnimatedSprite.gd" type="Script" id=2]
+[ext_resource path="res://recursos/trilhas/trilha4.png" type="Texture" id=3]
+[ext_resource path="res://recursos/Horizonte.png" type="Texture" id=4]
+[ext_resource path="res://packed/SpwnBck.gd" type="Script" id=5]
+[ext_resource path="res://packed/Caminho -1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://packed/Caminho 1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://recursos/nevoa.png" type="Texture" id=8]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1.87332, 1.36557, 0, 0, 0, 0, -61.8464, 222.839 )
+}
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1.87332, 1.36557, 0, 0, 0, 0, 61.8904, 220.345 )
+}
+
+[sub_resource type="CanvasItemMaterial" id=3]
+
+render_priority = 0
+blend_mode = 1
+light_mode = 0
+
+[node name="Ambiente" type="Node2D" index="0"]
+
+position = Vector2( 0, 256 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fundo" type="ParallaxBackground" parent="." index="0"]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Fundo" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+modulate = Color( 1, 1, 1, 0.878471 )
+light_mask = 0
+frames = ExtResource( 1 )
+animation = "Movimento"
+frame = 1
+playing = true
+script = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="trilha" type="Sprite" parent="." index="2"]
+
+visible = false
+z_index = -1
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Z Index" ]
+
+[node name="horizonte" type="Sprite" parent="." index="3"]
+
+scale = Vector2( 2, 1 )
+z_index = -1
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="SpwnBck" type="Timer" parent="." index="4"]
+
+editor/display_folded = true
+process_mode = 1
+wait_time = 0.8
+one_shot = false
+autostart = true
+script = ExtResource( 5 )
+
+[node name="Caminhos" type="Node2D" parent="SpwnBck" index="0"]
+
+position = Vector2( 72, 0 )
+scale = Vector2( 2, 1 )
+z_index = -1
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ 192.914, 220.413 ],
+"_edit_vertical_guides_": [ -10.0352, 154.129 ]
+}
+
+[node name="Caminho -1" parent="SpwnBck/Caminhos" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( -24, 64 )
+curve = SubResource( 1 )
+
+[node name="Caminho 1" parent="SpwnBck/Caminhos" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 24, 64 )
+curve = SubResource( 2 )
+
+[node name="nevoa" type="Sprite" parent="." index="5"]
+
+visible = false
+modulate = Color( 0.95487, 0.957031, 0.680389, 0.469647 )
+material = SubResource( 3 )
+position = Vector2( 0, -32 )
+scale = Vector2( 3, 0.75 )
+z_index = 10
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+
