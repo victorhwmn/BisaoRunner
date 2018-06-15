@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ru.wav-9217e7a1895d5223201a8456a112c588.sample"
+
+[deps]
+
+source_file="res://recursos/ru.wav"
+source_md5="19d8ae07a8171ca90051591ef9784370"
+
+dest_files=[ "res://.import/ru.wav-9217e7a1895d5223201a8456a112c588.sample" ]
+dest_md5="c78fb430aaecf88101b7a3d4c2af0355"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

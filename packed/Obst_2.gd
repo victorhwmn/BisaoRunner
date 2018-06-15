@@ -13,6 +13,8 @@ func _ready():
 	add_to_group("Inimigo")
 	set_process(true)
 	
+	$sfx.play()
+	
 	pass
 
 func _process(delta):
