@@ -5,6 +5,9 @@ var spawn_items = [
 	preload("res://packed/Obst_1.tscn"),
 	preload("res://packed/Obst_2.tscn"),
 	preload("res://packed/Obst_3.tscn"),
+#	preload("res://packed/Obst_Bus.tscn"),
+#	preload("res://packed/Obst_Car.tscn"),
+	preload("res://packed/Obst_Spd.tscn"),
 	preload("res://packed/Item_1.tscn"),
 	preload("res://packed/Item_2.tscn")]
 
