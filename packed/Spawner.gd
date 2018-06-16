@@ -19,8 +19,11 @@ func _ready():
 	connect("timeout",self,"_on_timeout")
 	
 func _on_timeout():
+	_spawn_line();
+	
+func _spawn_line():
 	#Randomiza as variáveis
-	randomize()
+	randomize();
 	
 	#Instancia o pathfollow para receber o inimigo
 	var segue_caminho=path_follow.instance();
@@ -38,5 +41,6 @@ func _on_timeout():
 	
 	#Instancia o inimigo no caminho definido acima
 	caminhos.get_child(r).add_child(segue_caminho)
+	
 	
 

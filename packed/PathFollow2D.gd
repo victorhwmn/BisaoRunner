@@ -1,5 +1,5 @@
 extends PathFollow2D
-
+var spawnFlag=true;
 
 func _ready():
 	
@@ -20,10 +20,11 @@ func _process(delta):
 	
 	#Coloca na frente do player se o passou (para dar nocao de profundidade)
 	set_z_index((position.y-40)/100);
-	#if(position.y>=player.position.y-72):
-	#	set_z_index(player.z_index+1);
 	
-	
+	#Spawna o proximo item/inimigo
+	if(unit_offset >=0.3 && spawnFlag):
+		get_parent().get_parent().get_parent()._spawn_line();
+		spawnFlag=false;
 	
 	#Destroi se chegar ao final do caminho
 	if(unit_offset >=1):

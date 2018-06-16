@@ -12,6 +12,9 @@ func _ready():
 	connect("timeout",self,"_on_timeout")
 	
 func _on_timeout():
+	_spawn_line();
+	
+func _spawn_line():
 	#Randomiza as variáveis
 	randomize()
 	
