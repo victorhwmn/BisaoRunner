@@ -29,7 +29,7 @@ render_priority = 0
 blend_mode = 1
 light_mode = 0
 
-[node name="Ambiente" type="Node2D"]
+[node name="Ambiente" type="Node2D" index="0"]
 
 position = Vector2( 0, 256 )
 _sections_unfolded = [ "Transform" ]
@@ -61,7 +61,7 @@ modulate = Color( 1, 1, 1, 0.878471 )
 light_mask = 0
 frames = ExtResource( 1 )
 animation = "Movimento"
-frame = 2
+frame = 1
 playing = true
 script = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Visibility" ]
