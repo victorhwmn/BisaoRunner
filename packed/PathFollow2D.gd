@@ -19,7 +19,7 @@ func _process(delta):
 
 	
 	#Coloca na frente do player se o passou (para dar nocao de profundidade)
-	set_z_index((position.y-50)/100);
+	set_z_index((position.y-40)/100);
 	
 	#Spawna o proximo item/inimigo
 	if(unit_offset >=0.3 && spawnFlag):
