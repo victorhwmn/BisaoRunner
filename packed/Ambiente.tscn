@@ -82,7 +82,6 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="SpwnBck" type="Timer" parent="." index="4"]
 
-editor/display_folded = true
 process_mode = 1
 wait_time = 0.8
 one_shot = false
@@ -91,6 +90,7 @@ script = ExtResource( 5 )
 
 [node name="Caminhos" type="Node2D" parent="SpwnBck" index="0"]
 
+visible = false
 position = Vector2( 72, 0 )
 scale = Vector2( 2, 1 )
 z_index = -1

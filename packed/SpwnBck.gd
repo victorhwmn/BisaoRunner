@@ -16,17 +16,18 @@ func _on_timeout():
 	
 func _spawn_line():
 	#Randomiza as variáveis
-	randomize()
+	randomize();
 	
-	#Instancia o pathfollow para receber o inimigo
+	#Instancia o pathfollow para receber o cenario
 	var segue_caminho=path_follow.instance();
 	
-	#Instancia um inimigo alatório do vetor no pathfollow
-	var r = rand_range(0,spawn_items.size())
-	var item = spawn_items[r].instance()
+	#Instancia um cenario alatório do vetor no pathfollow
+	var r = rand_range(0,spawn_items.size());
+	var item = spawn_items[r].instance();
 	#Corrige proporção
-	item.set_scale(Vector2(0.6,1))
-	segue_caminho.add_child(item)
+	item.set_scale(Vector2(0.6,1));
+	item.set_z_index(-1.8);
+	segue_caminho.add_child(item);
 	
 	#Recebe o nó de caminhos
 	var caminhos = get_child(0)
