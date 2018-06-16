@@ -61,7 +61,6 @@ modulate = Color( 1, 1, 1, 0.878471 )
 light_mask = 0
 frames = ExtResource( 1 )
 animation = "Movimento"
-frame = 3
 playing = true
 script = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Visibility" ]
