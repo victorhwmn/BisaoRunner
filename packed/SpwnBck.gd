@@ -26,7 +26,6 @@ func _spawn_line():
 	var item = spawn_items[r].instance();
 	#Corrige proporção
 	item.set_scale(Vector2(0.6,1));
-	item.set_z_index(-1.8);
 	segue_caminho.add_child(item);
 	
 	#Recebe o nó de caminhos

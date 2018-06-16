@@ -59,7 +59,7 @@ custom_solver_bias = 0.0
 radius = 14.8328
 height = 4.37591
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
