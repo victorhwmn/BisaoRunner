@@ -29,7 +29,7 @@ render_priority = 0
 blend_mode = 1
 light_mode = 0
 
-[node name="Ambiente" type="Node2D" index="0"]
+[node name="Ambiente" type="Node2D"]
 
 position = Vector2( 0, 256 )
 _sections_unfolded = [ "Transform" ]
@@ -61,7 +61,7 @@ modulate = Color( 1, 1, 1, 0.878471 )
 light_mask = 0
 frames = ExtResource( 1 )
 animation = "Movimento"
-frame = 1
+frame = 3
 playing = true
 script = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Visibility" ]
@@ -82,6 +82,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="SpwnBck" type="Timer" parent="." index="4"]
 
+editor/display_folded = true
 process_mode = 1
 wait_time = 0.8
 one_shot = false
