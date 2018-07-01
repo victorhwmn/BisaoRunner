@@ -1,9 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://packed/Player.gd" type="Script" id=1]
 [ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://packed/+250.gd" type="Script" id=3]
 [ext_resource path="res://recursos/Bision.png" type="Texture" id=4]
+[ext_resource path="res://recursos/player/frame0000.png" type="Texture" id=5]
+[ext_resource path="res://recursos/player/frame0001.png" type="Texture" id=6]
+[ext_resource path="res://recursos/player/frame0002.png" type="Texture" id=7]
+[ext_resource path="res://recursos/player/frame0003.png" type="Texture" id=8]
+[ext_resource path="res://recursos/player/frame0004.png" type="Texture" id=9]
+[ext_resource path="res://recursos/player/frame0005.png" type="Texture" id=10]
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -58,6 +64,15 @@ _sections_unfolded = [ "Font", "Resource", "Settings" ]
 custom_solver_bias = 0.0
 radius = 14.8328
 height = 4.37591
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
 
 [node name="Player" type="RigidBody2D" index="0"]
 
@@ -145,5 +160,15 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
 texture = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="4"]
+
+visible = false
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 4 )
+animation = "default"
+frame = 1
+playing = true
+_sections_unfolded = [ "Transform" ]
 
 
