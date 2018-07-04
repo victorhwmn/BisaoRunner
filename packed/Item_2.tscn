@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://packed/Item_2.gd" type="Script" id=1]
-[ext_resource path="res://recursos/cafe.png" type="Texture" id=2]
-[ext_resource path="res://recursos/coffee.wav" type="AudioStream" id=3]
+[ext_resource path="res://recursos/items/cafe.png" type="Texture" id=2]
+[ext_resource path="res://recursos/items/coffee.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 15.3306, 16.0448 )
 
-[node name="Item" type="RigidBody2D" index="0"]
+[node name="Item" type="RigidBody2D"]
 
 position = Vector2( 0, -16 )
 input_pickable = false

@@ -3,7 +3,7 @@
 [ext_resource path="res://packed/Player.gd" type="Script" id=1]
 [ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://packed/+250.gd" type="Script" id=3]
-[ext_resource path="res://recursos/Bision.png" type="Texture" id=4]
+[ext_resource path="res://recursos/player/Bision.png" type="Texture" id=4]
 [ext_resource path="res://recursos/player/frame0000.png" type="Texture" id=5]
 [ext_resource path="res://recursos/player/frame0001.png" type="Texture" id=6]
 [ext_resource path="res://recursos/player/frame0002.png" type="Texture" id=7]
@@ -159,15 +159,15 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
+visible = false
 texture = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="4"]
 
-visible = false
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.1, 0.12 )
 frames = SubResource( 4 )
 animation = "default"
-frame = 1
+frame = 3
 playing = true
 _sections_unfolded = [ "Transform" ]
 

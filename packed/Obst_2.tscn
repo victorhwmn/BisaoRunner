@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://packed/Obst_2.gd" type="Script" id=1]
-[ext_resource path="res://recursos/tinyDogo.png" type="Texture" id=2]
-[ext_resource path="res://recursos/bruce.wav" type="AudioStream" id=3]
+[ext_resource path="res://recursos/inimigos/tinyDogo.png" type="Texture" id=2]
+[ext_resource path="res://recursos/inimigos/bruce.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12.905, 8.18412 )
 
-[node name="Obstaculo" type="RigidBody2D" index="0"]
+[node name="Obstaculo" type="RigidBody2D"]
 
 position = Vector2( 0, -16 )
 input_pickable = false

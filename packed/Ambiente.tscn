@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Ambiente.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://packed/AnimatedSprite.gd" type="Script" id=2]
 [ext_resource path="res://recursos/trilhas/trilha4.png" type="Texture" id=3]
-[ext_resource path="res://recursos/Horizonte.png" type="Texture" id=4]
+[ext_resource path="res://recursos/cenario/Horizonte.png" type="Texture" id=4]
 [ext_resource path="res://packed/SpwnBck.gd" type="Script" id=5]
 [ext_resource path="res://packed/Caminho -1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://packed/Caminho 1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://recursos/nevoa.png" type="Texture" id=8]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -22,12 +21,6 @@ bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1.87332, 1.36557, 0, 0, 0, 0, 61.8904, 220.345 )
 }
-
-[sub_resource type="CanvasItemMaterial" id=3]
-
-render_priority = 0
-blend_mode = 1
-light_mode = 0
 
 [node name="Ambiente" type="Node2D" index="0"]
 
@@ -61,7 +54,7 @@ modulate = Color( 1, 1, 1, 0.878471 )
 light_mask = 0
 frames = ExtResource( 1 )
 animation = "Movimento"
-frame = 1
+frame = 2
 playing = true
 script = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Visibility" ]
@@ -110,16 +103,5 @@ curve = SubResource( 1 )
 
 position = Vector2( 24, 64 )
 curve = SubResource( 2 )
-
-[node name="nevoa" type="Sprite" parent="." index="5"]
-
-visible = false
-modulate = Color( 0.95487, 0.957031, 0.680389, 0.469647 )
-material = SubResource( 3 )
-position = Vector2( 0, -32 )
-scale = Vector2( 3, 0.75 )
-z_index = 10
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 
