@@ -7,10 +7,10 @@ path="res://.import/frame0001.png-851b2e21e3d667042c8e88200f69574e.stex"
 [deps]
 
 source_file="res://recursos/player/frame0001.png"
-source_md5="9f6b79568cbad2dfecae68ca26a225f0"
+source_md5="097ce406772002257ffdedfb91265316"
 
 dest_files=[ "res://.import/frame0001.png-851b2e21e3d667042c8e88200f69574e.stex" ]
-dest_md5="eeebf70cd2bc8d3bc5c3b1987e896c5f"
+dest_md5="61a16668be46caf87081d70b225db3ec"
 
 [params]
 
