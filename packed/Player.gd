@@ -37,7 +37,7 @@ func _physics_process(delta):
 	
 	
 	velocidade+=INCR_VELOC;
-	print("velociade :", velocidade);
+	#print("velociade :", velocidade);
 	pass
 
 func _input(event):

@@ -25,6 +25,7 @@ func _process(delta):
 	if(unit_offset >=0.3 && spawnFlag):
 		get_parent().get_parent().get_parent()._spawn_line();
 		spawnFlag=false;
+		
 	
 	#Destroi se chegar ao final do caminho
 	if(unit_offset >=1):

@@ -13,14 +13,6 @@
 [ext_resource path="res://recursos/trilhas/trilha4.png" type="Texture" id=11]
 [ext_resource path="res://recursos/telaTitulo/BisionFront.png" type="Texture" id=12]
 
-
-
-
-
-
-
-
-
 [sub_resource type="DynamicFont" id=1]
 
 size = 100
@@ -146,7 +138,7 @@ _sections_unfolded = [ "Focus", "Margin", "Mouse", "Pause", "Rect", "Size Flags"
 
 frames = SubResource( 2 )
 animation = "default"
-frame = 2
+frame = 1
 playing = true
 centered = false
 
