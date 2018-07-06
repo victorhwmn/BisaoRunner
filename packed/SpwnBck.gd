@@ -14,6 +14,9 @@ func _ready():
 func _on_timeout():
 	_spawn_line();
 	
+func _next_line():
+	_spawn_line()	
+	
 func _spawn_line():
 	#Randomiza as variáveis
 	randomize();

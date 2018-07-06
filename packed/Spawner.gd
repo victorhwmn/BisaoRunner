@@ -21,32 +21,37 @@ func _ready():
 	connect("timeout",self,"_on_timeout")
 	
 func _on_timeout():
-	_spawn_line();
+	for i in range(3):
+		_spawn_line(i);
+		
+func _next_line():
 	
-func _spawn_line():
+	for i in range(3):
+		_spawn_line(i);		
+	
+	
+func _spawn_line(var i):
+
 	#Randomiza as variáveis
 	randomize();
-	
+
 	#Instancia o pathfollow para receber o inimigo
 	var segue_caminho=path_follow.instance();
 	var jogador=player.instance();
-	
+
 	#Instancia um inimigo alatório do vetor no pathfollow
-	var r = int(rand_range(0,spawn_items.size()+(10-(jogador.velocidade/500))))
+	var r = int(rand_range(0,spawn_items.size()+(5-(jogador.velocidade/500))))
 	if(r < spawn_items.size()):	
-		print("help :", r)
 		var item = spawn_items[r].instance()
 		segue_caminho.add_child(item)
-	else:
-		print("teste-----------------------------",r)		
 	#Recebe o nó de caminhos
 	var caminhos = get_child(0)
-	
+
 	#Escolhe um caminho (Índice) aleatório
-	r = rand_range(0 , caminhos.get_child_count())
-	
+	r = i
+
 	#Instancia o inimigo no caminho definido acima
 	caminhos.get_child(r).add_child(segue_caminho)
-	
+
 	
 

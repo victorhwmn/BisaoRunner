@@ -23,7 +23,7 @@ func _process(delta):
 	
 	#Spawna o proximo item/inimigo
 	if(unit_offset >=0.3 && spawnFlag):
-		get_parent().get_parent().get_parent()._spawn_line();
+		get_parent().get_parent().get_parent()._next_line();
 		spawnFlag=false;
 		
 	
@@ -31,3 +31,9 @@ func _process(delta):
 	if(unit_offset >=1):
 		get_parent().remove_child(self)
 
+func _spawn():
+	#Spawna o proximo item/inimigo
+	if(unit_offset >=0.3 && spawnFlag):
+		get_parent().get_parent().get_parent()._next_line();
+		spawnFlag=false;
+	
