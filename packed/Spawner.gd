@@ -37,6 +37,7 @@ func _spawn_line(var i):
 
 	#Instancia o pathfollow para receber o inimigo
 	var segue_caminho=path_follow.instance();
+	segue_caminho.init(i)
 	var jogador=player.instance();
 
 	#Instancia um inimigo alatório do vetor no pathfollow

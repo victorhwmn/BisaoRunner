@@ -1,5 +1,6 @@
 extends Timer
 
+var i = 0;
 #Carrega os inimigos
 var spawn_items = [
 	preload("res://packed/Arvore.tscn")]
