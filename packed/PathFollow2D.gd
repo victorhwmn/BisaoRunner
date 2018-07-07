@@ -9,9 +9,13 @@ func _process(delta):
 	#Recebe a velociade atual do player
 	var player = get_node("/root/mainGame/Player");
 	
+	var spdFactor= 1
+	if get_child_count():
+		spdFactor=get_child(0).speed
+	
 	if(scale.x>=0.8):
 		#Incrementa o offset no caminho, baseado no caminho total, para evitar problemas e sincronismo entre caminhos
-		set_unit_offset(unit_offset+0.01*(player.velocidade/500));
+		set_unit_offset(unit_offset+0.01*spdFactor*(player.velocidade/500));
 		#Aumenta a escala dos elementos (profundidade)
 		set_scale(scale*1.005);
 	else:

@@ -1,8 +1,7 @@
 extends RigidBody2D
 #Enemy BIZAO
 
-var speed=1
-var _player = null
+var speed=1.5
 #var _acceleration=0
 #var _max_speed=5
 

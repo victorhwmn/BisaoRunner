@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 #Item RU
+var speed=1
 
 var _player = null
 var hitted = false	#Flag indica se item foi atingido por player

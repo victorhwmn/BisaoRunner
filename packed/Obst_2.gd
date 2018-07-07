@@ -3,6 +3,7 @@ extends RigidBody2D
 #Enemy LIXERA
 
 var _player = null
+var speed=1.2
 
 # class member variables go here, for example:
 # var a = 2
