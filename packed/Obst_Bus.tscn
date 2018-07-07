@@ -10,7 +10,7 @@ extents = Vector2( 45.0156, 31.5918 )
 
 [node name="Obstaculo" type="RigidBody2D"]
 
-position = Vector2( 0, -60 )
+position = Vector2( 25, -60 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

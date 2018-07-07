@@ -5,11 +5,12 @@ var spawn_items = [
 	preload("res://packed/Obst_1.tscn"),
 	preload("res://packed/Obst_2.tscn"),
 	preload("res://packed/Obst_3.tscn"),
-	#preload("res://packed/Obst_Bus.tscn"),
-	#preload("res://packed/Obst_Car.tscn"),
 	preload("res://packed/Obst_Spd.tscn"),
 	preload("res://packed/Item_1.tscn"),
-	preload("res://packed/Item_2.tscn")]
+	preload("res://packed/Item_2.tscn"),
+	preload("res://packed/Obst_Bus.tscn"),
+	preload("res://packed/Obst_Car.tscn")
+	]
 	
 var linhaAtual = [-1,-1,-1]
 var iLinhaAtual = 0
@@ -29,7 +30,7 @@ var matrizesNPCs = [
 							[-1,5,-1],
 							[-1,5,-1],
 							[-1,1,-1],
-							[-1,-2,-1]
+							[-1,-1,-1]
 						],[
 							[4,-1,-1],
 							[-1,4,-1],
@@ -37,7 +38,7 @@ var matrizesNPCs = [
 							[4,-1,-1]
 						],[
 							[-1,5,-1],
-							[-1,4,0],
+							[-1,4,-1],
 							[-1,5,-1],
 							[-1,0,-1]
 						],[
@@ -45,7 +46,18 @@ var matrizesNPCs = [
 							[-1,5,-1],
 							[-1,-1,-1],
 							[1,5,-1]
+						],[
+							[-1,-1,-1],
+							[-1,-1,4],
+							[6,-1,-1],
+							[-1,-1,-1]
+						],[
+							[-1,-1,-1],
+							[4,-1,-1],
+							[-1,-1,7],
+							[-1,-1,-1]
 						]
+						
 					]
 
 #Carrega o PathFollow, container com script que segue o caminho das trilhas
@@ -61,7 +73,7 @@ func _on_timeout():
 		_spawn_line(i);
 		
 func _next_line():
-	print(iLinhaAtual)
+	
 	#Se a matriz acabou
 	if(iLinhaAtual > 3):
 		#Randomiza as variáveis
@@ -84,7 +96,6 @@ func _spawn_line(var i):
 	var segue_caminho=path_follow.instance();
 	segue_caminho.init(i)
 	var jogador=player.instance();
-
 	#Instancia um inimigo alatório do vetor no pathfollow
 	#var r = int(rand_range(0,spawn_items.size()+(5-(jogador.velocidade/500))))
 	if(linhaAtual[i] != -1):	

@@ -16,6 +16,8 @@ func _ready():
 	pass
 
 func _process(delta):
+	rotate(sin(delta*1000)*0.01)
+	
 	if $sfx.playing == false && hitted == true:
 		get_parent().remove_child(self)
 	pass
