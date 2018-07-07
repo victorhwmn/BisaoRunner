@@ -9,7 +9,7 @@ custom_solver_bias = 0.0
 radius = 18.0977
 height = 2.54602
 
-[node name="Obstaculo" type="RigidBody2D" index="0"]
+[node name="Obstaculo" type="RigidBody2D"]
 
 position = Vector2( 0, -32 )
 input_pickable = false
