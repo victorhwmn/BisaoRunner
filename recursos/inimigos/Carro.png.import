@@ -10,7 +10,7 @@ source_file="res://recursos/inimigos/Carro.png"
 source_md5="976019505284bf35056173d6db8b5d4d"
 
 dest_files=[ "res://.import/Carro.png-00ce61c4ffec04af07db30a021a4bbe1.stex" ]
-dest_md5="c6eeed77b7f17bc3b7cee72b19a6d519"
+dest_md5="d82166ba0e38e9186fd09295e5a604a3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

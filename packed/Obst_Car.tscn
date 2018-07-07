@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 52.6773, 21.4345 )
 
-[node name="Obstaculo" type="RigidBody2D" index="0"]
+[node name="Obstaculo" type="RigidBody2D"]
 
 position = Vector2( -25, -48 )
 input_pickable = false
