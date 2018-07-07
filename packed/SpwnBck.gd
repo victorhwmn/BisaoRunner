@@ -1,5 +1,6 @@
 extends Timer
 
+var i = 0;
 #Carrega os inimigos
 var spawn_items = [
 	preload("res://packed/Arvore.tscn")]
@@ -13,6 +14,9 @@ func _ready():
 	
 func _on_timeout():
 	_spawn_line();
+	
+func _next_line():
+	_spawn_line()	
 	
 func _spawn_line():
 	#Randomiza as variáveis
