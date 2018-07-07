@@ -22,7 +22,7 @@ func _process(delta):
 	set_z_index((position.y-50)/100);
 	
 	#Spawna o proximo item/inimigo
-	if(unit_offset >=0.3 && spawnFlag):
+	if(unit_offset >=0.25 && spawnFlag):
 		get_parent().get_parent().get_parent()._next_line();
 		spawnFlag=false;
 	
