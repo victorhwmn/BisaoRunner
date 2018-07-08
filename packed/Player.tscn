@@ -156,6 +156,7 @@ _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 position = Vector2( 0, 10 )
 z_index = 1
 shape = SubResource( 3 )
+disabled = true
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="3"]
@@ -168,7 +169,7 @@ visible = false
 scale = Vector2( 0.1, 0.12 )
 frames = SubResource( 4 )
 animation = "default"
-frame = 1
+frame = 3
 playing = true
 script = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
