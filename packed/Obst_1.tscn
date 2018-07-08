@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://packed/Obst_1.gd" type="Script" id=1]
+[ext_resource path="res://packed/Obst_Uni.gd" type="Script" id=1]
 [ext_resource path="res://recursos/inimigos/Unicorn.png" type="Texture" id=2]
 [ext_resource path="res://recursos/inimigos/Trot.wav" type="AudioStream" id=3]
 
@@ -10,7 +10,7 @@ custom_solver_bias = 0.0
 radius = 13.5641
 height = 9.34488
 
-[node name="Obstaculo" type="RigidBody2D"]
+[node name="Obstaculo" type="RigidBody2D" index="0"]
 
 position = Vector2( 0, -26 )
 input_pickable = false
