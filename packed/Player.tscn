@@ -1,16 +1,28 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://packed/Player.gd" type="Script" id=1]
-[ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://packed/+250.gd" type="Script" id=3]
-[ext_resource path="res://recursos/player/Bision.png" type="Texture" id=4]
-[ext_resource path="res://recursos/player/frame0000.png" type="Texture" id=5]
-[ext_resource path="res://recursos/player/frame0001.png" type="Texture" id=6]
-[ext_resource path="res://recursos/player/frame0002.png" type="Texture" id=7]
-[ext_resource path="res://recursos/player/frame0003.png" type="Texture" id=8]
-[ext_resource path="res://recursos/player/frame0004.png" type="Texture" id=9]
-[ext_resource path="res://recursos/player/frame0005.png" type="Texture" id=10]
-[ext_resource path="res://packed/AnimatedSpritePlayer.gd" type="Script" id=11]
+[ext_resource path="res://recursos/player/particulas.png" type="Texture" id=2]
+[ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://packed/+250.gd" type="Script" id=4]
+[ext_resource path="res://recursos/player/Bision.png" type="Texture" id=5]
+[ext_resource path="res://recursos/player/frame0000.png" type="Texture" id=6]
+[ext_resource path="res://recursos/player/frame0001.png" type="Texture" id=7]
+[ext_resource path="res://recursos/player/frame0002.png" type="Texture" id=8]
+[ext_resource path="res://recursos/player/frame0003.png" type="Texture" id=9]
+[ext_resource path="res://recursos/player/frame0004.png" type="Texture" id=10]
+[ext_resource path="res://recursos/player/frame0005.png" type="Texture" id=11]
+[ext_resource path="res://packed/AnimatedSpritePlayer.gd" type="Script" id=12]
+
+[sub_resource type="Gradient" id=5]
+
+offsets = PoolRealArray( 0, 0.502959, 1 )
+colors = PoolColorArray( 0.980469, 0.96102, 0.482574, 1, 1, 0.93531, 0, 1, 1, 0.960938, 0, 0.0386667 )
+
+[sub_resource type="GradientTexture" id=6]
+
+flags = 4
+gradient = SubResource( 5 )
+width = 2048
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -18,11 +30,11 @@ render_priority = 1
 trail_divisor = 1
 emission_shape = 1
 emission_sphere_radius = 25.0
-flag_align_y = false
+flag_align_y = true
 flag_rotate_y = true
 flag_disable_z = true
 spread = 100.0
-flatness = 0.0
+flatness = 1.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 25.0
 initial_velocity_random = 0.0
@@ -39,10 +51,10 @@ tangential_accel_random = 0.0
 damping = 10.0
 damping_random = 0.0
 angle = 0.0
-angle_random = 0.0
-scale = 7.0
+angle_random = 1.0
+scale = 1.0
 scale_random = 0.0
-color = Color( 1, 0.960938, 0, 1 )
+color_ramp = SubResource( 6 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 10.0
@@ -57,7 +69,7 @@ _sections_unfolded = [ "Angle", "Angular Velocity", "Color", "Flags", "Gravity",
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [sub_resource type="CapsuleShape2D" id=3]
@@ -69,7 +81,7 @@ height = 4.37591
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "default",
 "speed": 20.0
@@ -105,25 +117,25 @@ __meta__ = {
 
 modulate = Color( 1, 1, 1, 0 )
 z_index = 1
-emitting = false
-amount = 10
-lifetime = 2.0
+emitting = true
+amount = 5
+lifetime = 1.5
 one_shot = true
 preprocess = 0.0
 speed_scale = 5.0
-explosiveness = 1.0
+explosiveness = 0.5
 randomness = 1.0
 fixed_fps = 0
 fract_delta = false
 visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
+local_coords = false
 draw_order = 0
 process_material = SubResource( 1 )
-texture = null
+texture = ExtResource( 2 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Drawing", "Pause", "Process Material", "Textures", "Time", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Drawing", "Pause", "Process Material", "Textures", "Time", "Transform", "Visibility", "Z Index" ]
 
 [node name="+250" type="Label" parent="." index="1"]
 
@@ -148,7 +160,7 @@ text = "250"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
@@ -160,7 +172,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="4"]
 
@@ -168,8 +180,9 @@ visible = false
 scale = Vector2( 0.1, 0.12 )
 frames = SubResource( 4 )
 animation = "default"
+frame = 2
 playing = true
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 
