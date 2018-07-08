@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://packed/Player.gd" type="Script" id=1]
 [ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.ttf" type="DynamicFontData" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://recursos/player/frame0003.png" type="Texture" id=8]
 [ext_resource path="res://recursos/player/frame0004.png" type="Texture" id=9]
 [ext_resource path="res://recursos/player/frame0005.png" type="Texture" id=10]
+[ext_resource path="res://packed/AnimatedSpritePlayer.gd" type="Script" id=11]
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -74,7 +75,7 @@ animations = [ {
 "speed": 20.0
 } ]
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -159,16 +160,17 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
+visible = false
 texture = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="4"]
 
-visible = false
 scale = Vector2( 0.1, 0.12 )
 frames = SubResource( 4 )
 animation = "default"
-frame = 4
+frame = 3
 playing = true
+script = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
 
 
