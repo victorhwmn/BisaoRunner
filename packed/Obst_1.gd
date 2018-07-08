@@ -12,6 +12,8 @@ func _ready():
 	add_to_group("Inimigo")
 	set_process(true)
 	
+	$sfx.play()
+	
 	pass
 
 func _process(delta):
@@ -30,5 +32,4 @@ func _process(delta):
 func hit_by_player():
 	get_parent().remove_child(self)
 	pass
-
 

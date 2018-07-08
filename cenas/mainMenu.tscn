@@ -138,6 +138,7 @@ _sections_unfolded = [ "Focus", "Margin", "Mouse", "Pause", "Rect", "Size Flags"
 
 frames = SubResource( 2 )
 animation = "default"
+frame = 3
 playing = true
 centered = false
 
