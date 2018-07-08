@@ -17,3 +17,8 @@ func hit_by_player():
 	get_parent().remove_child(self)
 	pass
 
+
+
+func _on_sfx_finished():
+	$sfx.play()
+	pass # replace with function body

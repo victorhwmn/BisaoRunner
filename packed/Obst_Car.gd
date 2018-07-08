@@ -7,6 +7,7 @@ func _ready():
 	set_process(true)
 	
 	$sfx.play()
+	$honk.play()
 	
 	pass
 
