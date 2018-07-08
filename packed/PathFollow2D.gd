@@ -14,11 +14,13 @@ func _process(delta):
 		spdFactor=get_child(0).speed
 	
 	if(scale.x>=0.8):
+		set_modulate(Color(1,1,1,1))
 		#Incrementa o offset no caminho, baseado no caminho total, para evitar problemas e sincronismo entre caminhos
 		set_unit_offset(unit_offset+0.01*spdFactor*(player.velocidade/500));
 		#Aumenta a escala dos elementos (profundidade)
 		set_scale(scale*1.005);
 	else:
+		set_modulate(Color(1,1,1,scale.x/0.7))
 		set_scale(scale*1.05);
 
 	
