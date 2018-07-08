@@ -164,10 +164,10 @@ texture = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="4"]
 
+visible = false
 scale = Vector2( 0.1, 0.12 )
 frames = SubResource( 4 )
 animation = "default"
-frame = 4
 playing = true
 script = ExtResource( 11 )
 _sections_unfolded = [ "Transform" ]
