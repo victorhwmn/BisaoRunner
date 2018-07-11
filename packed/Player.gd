@@ -33,8 +33,8 @@ func _ready():
 
 func _physics_process(delta):
 	#Distorce com o veneno
-	if(veneno==1):
-		rotate(sin(pontuacao%9*10)*0.002)
+	if(veneno>0):
+		set_rotation_degrees(sin(pontuacao)*(veneno*10))
 	
 	#Atualiza posição do player
 	_atualiza_pos(direcao);	
@@ -117,7 +117,7 @@ func _on_body_enter(other):
 		other.hit_by_player();
 		get_node("../Distorcao").set_visible(true);
 		get_node("../Distorcao/Timer").start();
-		veneno=1;
+		veneno+=1;
 	
 	
 	elif(other.is_in_group("Item")):
