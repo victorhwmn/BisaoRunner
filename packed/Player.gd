@@ -6,6 +6,7 @@ const INCR_VELOC = 0.05;
 var pontuacao;
 var movimentacao;
 var newMov;
+var veneno=0
 
 # Movimentação
 var direcao=0;
@@ -31,6 +32,9 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	#Distorce com o veneno
+	if(veneno==1):
+		rotate(sin(pontuacao%9*10)*0.002)
 	
 	#Atualiza posição do player
 	_atualiza_pos(direcao);	
@@ -104,12 +108,18 @@ func _pontuacao():
 func _on_body_enter(other):
 	
 	
-	
 	if(other.is_in_group("Inimigo")):
 		other.hit_by_player();
 		#Cria uma nova arvore de jogo e deleta a atual
 		get_tree().change_scene("res://cenas/mainMenu.tscn");
-
+	
+	elif(other.is_in_group("ItemRuim")):
+		other.hit_by_player();
+		get_node("../Distorcao").set_visible(true);
+		get_node("../Distorcao/Timer").start();
+		veneno=1;
+	
+	
 	elif(other.is_in_group("Item")):
 		other.hit_by_player();
 		

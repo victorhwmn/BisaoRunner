@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://recursos/items/V.png" type="Texture" id=1]
+[ext_resource path="res://recursos/items/ru.wav" type="AudioStream" id=2]
+
+[sub_resource type="GDScript" id=2]
+
+script/source = "extends RigidBody2D
+#Item VENENO
+var speed=1
+
+var _player = null
+var hitted = false	#Flag indica se item foi atingido por player
+
+
+func _ready():
+	#_player = get_node(\"/root\").get_node('Player')
+	add_to_group(\"ItemRuim\")
+	set_process(true)
+	
+	pass
+
+func _process(delta):
+	rotate(sin(delta*10000000000000)*0.01)
+	
+	if $sfx.playing == false && hitted == true:
+		get_parent().remove_child(self)
+	pass
+func hit_by_player():
+	$sfx.play()
+	hitted = true
+	visible = false
+	$CollisionShape2D.disabled = true
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.3306, 16.0448 )
+
+[node name="Item" type="RigidBody2D"]
+
+position = Vector2( 0, -16 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 3
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+z_index = 1
+shape = SubResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = ExtResource( 2 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+
