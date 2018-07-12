@@ -10,9 +10,9 @@ func _ready():
 
 func _process(delta):
 	if filtro_corote.visible == true:
-		pitch.set_pitch_scale(randi() % 2 + 0.01)
-		self.volume_db = 24
+		pitch.set_pitch_scale(randi() % 8 + 0.01)
+		
 	else:
-		self.volume_db = 0
+		#self.volume_db = 0
 		pitch.set_pitch_scale(1)
 	pass
