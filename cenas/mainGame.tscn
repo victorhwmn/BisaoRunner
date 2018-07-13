@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://cenas/mainGame.gd" type="Script" id=1]
 [ext_resource path="res://packed/Ambiente.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://packed/Spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=6]
 [ext_resource path="res://cenas/Pause.gd" type="Script" id=7]
+[ext_resource path="res://recursos/musicas/Bateria_BR_Game_v1.ogg" type="AudioStream" id=8]
+[ext_resource path="res://cenas/music.gd" type="Script" id=9]
 
 [sub_resource type="GDScript" id=1]
 
@@ -95,7 +97,7 @@ shader = SubResource( 7 )
 shader_param/frequency = null
 shader_param/depth = null
 
-[node name="mainGame" type="Node2D" index="0"]
+[node name="mainGame" type="Node2D"]
 
 pause_mode = 1
 script = ExtResource( 1 )
@@ -106,7 +108,7 @@ __meta__ = {
 
 [node name="Ambiente" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 72, 128 )
+position = Vector2( 71.6028, 129.589 )
 z_index = -1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -221,6 +223,15 @@ process_mode = 1
 wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="music" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "BGM"
+script = ExtResource( 9 )
 
 [connection signal="timeout" from="Distorcao/Timer" to="Distorcao" method="_on_Timer_timeout"]
 
