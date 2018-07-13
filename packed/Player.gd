@@ -12,6 +12,7 @@ var veneno=0
 var direcao=0;
 var flag=0;
 const SWIPE_MIN = 5;
+var deslocamento = Vector2(5,0)
 
 #Maquina de estados de posições
 enum CAMINHO { CENTRAL , DIREITO , ESQUERDO};
@@ -37,8 +38,7 @@ func _physics_process(delta):
 		set_rotation_degrees(sin(pontuacao)*(veneno*10))
 	
 	#Atualiza posição do player
-	_atualiza_pos(direcao);	
-	
+	_atualiza_pos(direcao);
 	
 	velocidade+=INCR_VELOC;
 	#print("velociade :", velocidade);
@@ -67,20 +67,19 @@ func _atualiza_pos(direcao):
 		caminhoAtual=CAMINHO.ESQUERDO;
 	if(position.x == 127):
 		caminhoAtual=CAMINHO.DIREITO;
-			
+	
 	match caminhoAtual:
 		
 		CAMINHO.CENTRAL:
-			
 			if(position.x>=17 and ( direcao<0 or flag <0)):
 				flag=-1;
-				set_position(position+Vector2(-5,0));
+				set_position(position+deslocamento*-1);
 				if(position.x == 16) :
 					flag = 0;
 					caminhoAtual=CAMINHO.ESQUERDO;
 			if(position.x<=127 and (direcao>0 or flag>0)):
 				flag=1;
-				set_position(position+Vector2(5,0));
+				set_position(position+deslocamento*1);
 				if(position.x == 16) :
 					flag = 0;
 					caminhoAtual=CAMINHO.DIREITO;
@@ -88,7 +87,7 @@ func _atualiza_pos(direcao):
 		CAMINHO.ESQUERDO:
 			if(position.x<=72 and (direcao>0 or flag>0)):
 				flag = 1;
-				set_position(position+Vector2(5,0));
+				set_position(position+deslocamento*1);
 				if(position.x==72) :
 					flag = 0;
 					caminhoAtual=CAMINHO.CENTRAL;
@@ -96,7 +95,7 @@ func _atualiza_pos(direcao):
 		CAMINHO.DIREITO:
 			if(position.x>=72 and (direcao<0 or flag<0)):
 				flag = -1;
-				set_position(position+Vector2(-5,0));
+				set_position(position+deslocamento*-1);
 				if(position.x==72) :
 					flag = 0;
 					caminhoAtual=CAMINHO.CENTRAL;
