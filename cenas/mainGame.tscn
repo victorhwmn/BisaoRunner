@@ -97,7 +97,7 @@ shader = SubResource( 7 )
 shader_param/frequency = null
 shader_param/depth = null
 
-[node name="mainGame" type="Node2D"]
+[node name="mainGame" type="Node2D" index="0"]
 
 pause_mode = 1
 script = ExtResource( 1 )

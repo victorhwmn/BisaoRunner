@@ -22,10 +22,10 @@ font_data = ExtResource( 2 )
 fallback/0 = ExtResource( 2 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
 
-[sub_resource type="ShortCut" id=4]
+[sub_resource type="ShortCut" id=2]
 
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
 "frames": [ null, ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ],
@@ -34,13 +34,13 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=4]
 
 render_priority = 0
 blend_mode = 0
 light_mode = 1
 
-[node name="mainMenu" type="Node" index="0"]
+[node name="mainMenu" type="Node"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ 72.0217 ]
@@ -130,7 +130,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 4 )
+shortcut = SubResource( 2 )
 group = null
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
@@ -139,9 +139,9 @@ _sections_unfolded = [ "Focus", "Mouse", "Pause", "Size Flags", "Textures", "The
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="hud/btn_play" index="0"]
 
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "default"
-frame = 3
+frame = 2
 playing = true
 centered = false
 
@@ -187,7 +187,7 @@ normal_map = ExtResource( 11 )
 
 [node name="Logo" type="Sprite" parent="." index="4"]
 
-material = SubResource( 3 )
+material = SubResource( 4 )
 position = Vector2( 72, 192 )
 z_index = 1
 z_as_relative = false

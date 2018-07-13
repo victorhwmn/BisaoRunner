@@ -116,7 +116,7 @@ func _on_body_enter(other):
 		other.hit_by_player();
 		get_node("../Distorcao").set_visible(true);
 		get_node("../Distorcao/Timer").start();
-		veneno+=1;
+		veneno=1;
 	
 	
 	elif(other.is_in_group("Item")):
