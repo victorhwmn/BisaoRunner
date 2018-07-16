@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://packed/Obst_Car.gd" type="Script" id=1]
 [ext_resource path="res://recursos/inimigos/Carro.png" type="Texture" id=2]
 [ext_resource path="res://recursos/inimigos/Car.wav" type="AudioStream" id=3]
+[ext_resource path="res://recursos/inimigos/Car Honk.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 52.6773, 21.4345 )
 
-[node name="Obstaculo" type="RigidBody2D"]
+[node name="Obstaculo" type="RigidBody2D" index="0"]
 
 position = Vector2( -25, -48 )
 input_pickable = false
@@ -54,5 +55,17 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="honk" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = ExtResource( 4 )
+volume_db = -4.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="finished" from="honk" to="." method="_on_honk_finished"]
 
 

@@ -1,6 +1,6 @@
 extends AudioStreamPlayer
 
-var pitch = AudioServer.get_bus_effect(AudioServer.get_bus_index("BGM"), 0)
+var pitch = AudioServer.get_bus_effect(AudioServer.get_bus_index("BGM"), 0) # get PitchSift Effect from BGM audio bus
 onready var filtro_corote = get_node("../Distorcao")
 
 func _ready():
