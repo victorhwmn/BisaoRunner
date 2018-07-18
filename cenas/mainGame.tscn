@@ -1,0 +1,277 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://cenas/mainGame.gd" type="Script" id=1]
+[ext_resource path="res://packed/Ambiente.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed/UI_in_game.tscn" type="PackedScene" id=3]
+[ext_resource path="res://packed/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://packed/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=6]
+[ext_resource path="res://cenas/Pause.gd" type="Script" id=7]
+[ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://recursos/musicas/Bateria_BR_Game_v2.ogg" type="AudioStream" id=8]
+[ext_resource path="res://cenas/music.gd" type="Script" id=9]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Timer
+
+func _ready():
+	connect(\"timeout\",get_parent(),\"_pontuacao\");
+
+func _process(delta):
+	pass"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Shader" id=3]
+
+code = "shader_type canvas_item;
+
+uniform float frequency=90;
+uniform float depth = 0.005;
+
+void fragment() {
+	
+	vec2 uv = SCREEN_UV;
+	uv.x += sin(uv.y*frequency+TIME)*depth;
+	uv.x = clamp(uv.x,0,1);
+	vec3 c = textureLod(SCREEN_TEXTURE,uv,0.0).rgb;
+	
+	
+	COLOR.rgb=c;
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+
+render_priority = 0
+shader = SubResource( 3 )
+shader_param/frequency = null
+shader_param/depth = null
+
+[sub_resource type="Gradient" id=5]
+
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+
+flags = 4
+gradient = SubResource( 5 )
+width = 100
+
+[sub_resource type="GDScript" id=7]
+
+script/source = "extends TextureRect
+
+func _ready():
+	pass
+
+
+func _on_Timer_timeout():
+	self.set_visible(false)
+	var player = get_node(\"../Player\");
+	player.veneno=0;
+	player.set_rotation_degrees(0);
+	pass # replace with function body
+"
+
+[sub_resource type="Shader" id=8]
+
+code = "shader_type canvas_item;
+
+uniform float frequency=60;
+uniform float depth = 0.05;
+
+void fragment() {
+	
+	vec2 uv = SCREEN_UV;
+	uv.x += sin(uv.y*frequency+TIME)*depth;
+	uv.x = clamp(uv.x,0,1);
+	vec3 c = textureLod(SCREEN_TEXTURE,uv,0.0).rgb;
+	
+	
+	COLOR.rgb=c;
+}"
+
+[sub_resource type="ShaderMaterial" id=9]
+
+render_priority = 1
+shader = SubResource( 8 )
+shader_param/frequency = null
+shader_param/depth = null
+
+[node name="mainGame" type="Node2D" index="0"]
+
+pause_mode = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Transform" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ 0.284847, -23.4013 ]
+}
+
+[node name="Ambiente" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 71.6028, 129.589 )
+z_index = -1
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="PontuacaoPainel" type="ParallaxBackground" parent="." index="1"]
+
+editor/display_folded = true
+layer = 2
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 72, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 168, 0 )
+scroll_ignore_camera_zoom = false
+_sections_unfolded = [ "Scroll" ]
+
+[node name="PanelContainer" parent="PontuacaoPainel" index="0" instance=ExtResource( 3 )]
+
+[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 72, 200 )
+contacts_reported = 1
+contact_monitor = true
+_sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Transform" ]
+
+[node name="Pontuacao" type="Timer" parent="Player" index="2"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = true
+script = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="3"]
+
+position = Vector2( -72, -200 )
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -24
+limit_top = -10000000
+limit_right = 168
+limit_bottom = 256
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit", "Smoothing" ]
+
+[node name="Spawner" parent="." index="3" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+
+[node name="Caminhos" parent="Spawner" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 72, 64 )
+
+[node name="Pause" type="Node" parent="." index="4"]
+
+pause_mode = 2
+script = ExtResource( 7 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="Label" type="Label" parent="Pause" index="0"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "PAUSE"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Pause/Label" index="0"]
+
+color = Color( 0.570312, 0.570312, 0.570312, 1 )
+
+[node name="Distorcao" type="TextureRect" parent="." index="5"]
+
+editor/display_folded = true
+visible = false
+material = SubResource( 4 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 10, 7 )
+rect_pivot_offset = Vector2( 14, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = SubResource( 6 )
+expand = true
+stretch_mode = 0
+script = SubResource( 7 )
+_sections_unfolded = [ "Grow Direction", "Material", "Rect", "Size Flags" ]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Distorcao" index="0"]
+
+material = SubResource( 9 )
+scale = Vector2( 0.1, 0.1 )
+color = Color( 0.84375, 1, 0.926758, 1 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Timer" type="Timer" parent="Distorcao" index="1"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="music" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "BGM"
+script = ExtResource( 10 )
+
+[connection signal="timeout" from="Distorcao/Timer" to="Distorcao" method="_on_Timer_timeout"]
+
+

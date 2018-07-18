@@ -1,0 +1,15 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=2]
+
+[ext_resource path="res://recursos/trilhas/trilha1.png" type="Texture" id=1]
+[ext_resource path="res://recursos/trilhas/trilha2.png" type="Texture" id=2]
+[ext_resource path="res://recursos/trilhas/trilha3.png" type="Texture" id=3]
+
+[resource]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Movimento",
+"speed": 10.0
+} ]
+
