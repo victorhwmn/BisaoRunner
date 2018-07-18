@@ -7,10 +7,7 @@ path="res://.import/button_play_pressed.png-5c6deb261b505ba12595e81f587123b3.ste
 [deps]
 
 source_file="res://recursos/telaTitulo/button_play_pressed.png"
-source_md5="e7fd43f682985ccb29fc2806fc188059"
-
 dest_files=[ "res://.import/button_play_pressed.png-5c6deb261b505ba12595e81f587123b3.stex" ]
-dest_md5="59fc4cb9abc8dbc83d688ed1e2ce26f9"
 
 [params]
 

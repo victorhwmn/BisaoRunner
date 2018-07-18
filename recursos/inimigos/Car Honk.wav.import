@@ -7,10 +7,7 @@ path="res://.import/Car Honk.wav-24627a5211f7b36dd8964059df77ba39.sample"
 [deps]
 
 source_file="res://recursos/inimigos/Car Honk.wav"
-source_md5="45a98c877266f986303c51c59e482991"
-
 dest_files=[ "res://.import/Car Honk.wav-24627a5211f7b36dd8964059df77ba39.sample" ]
-dest_md5="eb2ce2b750686c3ec6a2f9680145774d"
 
 [params]
 

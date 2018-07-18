@@ -7,10 +7,7 @@ path="res://.import/ButtonInfo_press.png-3c4f0f6cb52fe2e08006d94462aac2f5.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/ButtonInfo_press.png"
-source_md5="c739be23fc0e93033df98f1a2d4ee2e1"
-
 dest_files=[ "res://.import/ButtonInfo_press.png-3c4f0f6cb52fe2e08006d94462aac2f5.stex" ]
-dest_md5="89949d3fc1f1783d2279657a8cdfc95f"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/start_hover.png-f19f46805f42b4b180f2c8f67a98b464.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/start_hover.png"
-source_md5="a2720ec4f367fe8af56fdb898520bbe9"
-
 dest_files=[ "res://.import/start_hover.png-f19f46805f42b4b180f2c8f67a98b464.stex" ]
-dest_md5="28a099c5c3d05e3eee2541399af76dec"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/Busao2.wav-063636392d4da64afdffcac3f84ff289.sample"
 [deps]
 
 source_file="res://recursos/inimigos/Busao2.wav"
-source_md5="1c399411cd9456bd5dae428d26dcfab1"
-
 dest_files=[ "res://.import/Busao2.wav-063636392d4da64afdffcac3f84ff289.sample" ]
-dest_md5="eacfe3d1605e007bb3b2e553cdb92bb2"
 
 [params]
 

@@ -109,6 +109,8 @@ func _on_body_enter(other):
 	
 	if(other.is_in_group("Inimigo")):
 		other.hit_by_player();
+		#Envia o score para o stage manager
+		stage_manager.score=pontuacao;
 		#Cria uma nova arvore de jogo e deleta a atual
 		get_tree().change_scene("res://cenas/mainMenu.tscn");
 	
@@ -126,7 +128,7 @@ func _on_body_enter(other):
 		
 		#Exibir particulas
 		if(particulas.get_modulate().a==0):
-			var cor=Color(particulas.get_modulate().r,particulas.get_modulate().g,particulas.get_modulate().b,1)
+			var cor=Color(particulas.get_modulate().r,particulas.get_modulate().g,particulas.get_modulate().b,1);
 			get_node("Particles2D").set_modulate(cor);
 			
 		#Emitir particulas

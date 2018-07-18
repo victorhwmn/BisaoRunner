@@ -7,10 +7,7 @@ path="res://.import/trilhas.png-a8d243b184f5ab721613115aa9bb3dfe.stex"
 [deps]
 
 source_file="res://recursos/cenario/trilhas.png"
-source_md5="02740975fa7372ec5927bca310e6c691"
-
 dest_files=[ "res://.import/trilhas.png-a8d243b184f5ab721613115aa9bb3dfe.stex" ]
-dest_md5="854b9c4d296337826aca174816039b4b"
 
 [params]
 

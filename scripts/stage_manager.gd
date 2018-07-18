@@ -1,21 +1,14 @@
 extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var score=0
+
 const STAGE_GAME = "res://cenas/mainGame.tscn"
 const STAGE_CREDITS = "res://cenas/creditos.tscn"
 const STAGE_MENU = "res://cenas/mainMenu.tscn"
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	
 	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
 
 func change_stage(stage_path):
 	# fade to black

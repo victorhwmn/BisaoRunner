@@ -7,10 +7,7 @@ path="res://.import/coffee.wav-c8caa3d49cc0293cc6007473399a351f.sample"
 [deps]
 
 source_file="res://recursos/items/coffee.wav"
-source_md5="f30414d771d26c7ef536372e937ef82d"
-
 dest_files=[ "res://.import/coffee.wav-c8caa3d49cc0293cc6007473399a351f.sample" ]
-dest_md5="583e68fbef39da100b492114c648656b"
 
 [params]
 

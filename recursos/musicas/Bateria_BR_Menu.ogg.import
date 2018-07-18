@@ -7,10 +7,7 @@ path="res://.import/Bateria_BR_Menu.ogg-bacaaf8e58ba2092f320d649dfca79be.oggstr"
 [deps]
 
 source_file="res://recursos/musicas/Bateria_BR_Menu.ogg"
-source_md5="aa8b944059f73bf1b48d51ed59d10712"
-
 dest_files=[ "res://.import/Bateria_BR_Menu.ogg-bacaaf8e58ba2092f320d649dfca79be.oggstr" ]
-dest_md5="c3517fad02dab76baa4b74e41a430011"
 
 [params]
 
