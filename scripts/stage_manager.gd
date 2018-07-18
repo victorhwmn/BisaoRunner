@@ -1,6 +1,7 @@
 extends Node
 
 var score=0
+var rank = [0,0,0,0,0]
 
 const STAGE_GAME = "res://cenas/mainGame.tscn"
 const STAGE_CREDITS = "res://cenas/creditos.tscn"

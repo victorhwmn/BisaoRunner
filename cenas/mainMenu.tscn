@@ -49,6 +49,7 @@ __meta__ = {
 
 [node name="Titulo" type="Sprite" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 72, 50 )
 scale = Vector2( 0.12, 0.12 )
 z_index = 2
@@ -141,7 +142,7 @@ _sections_unfolded = [ "Focus", "Mouse", "Pause", "Size Flags", "Textures", "The
 
 frames = SubResource( 3 )
 animation = "default"
-frame = 3
+frame = 2
 playing = true
 centered = false
 
