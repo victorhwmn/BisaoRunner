@@ -7,7 +7,10 @@ path="res://.import/Aranha.png-dc32baab955b49a8574bc165c64b6dc9.stex"
 [deps]
 
 source_file="res://recursos/inimigos/Aranha.png"
+source_md5="5270dd4e41780582a3879b82a192d88c"
+
 dest_files=[ "res://.import/Aranha.png-dc32baab955b49a8574bc165c64b6dc9.stex" ]
+dest_md5="57e16cb59d43a9393d2a41abbe980eea"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/ButtonInfo_normal.png-d74227e9aa368b57c79721198ba7e0ef.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/ButtonInfo_normal.png"
+source_md5="c739be23fc0e93033df98f1a2d4ee2e1"
+
 dest_files=[ "res://.import/ButtonInfo_normal.png-d74227e9aa368b57c79721198ba7e0ef.stex" ]
+dest_md5="89949d3fc1f1783d2279657a8cdfc95f"
 
 [params]
 

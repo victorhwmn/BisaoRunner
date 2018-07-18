@@ -7,7 +7,10 @@ path="res://.import/trilha4.png-c15496d97df93150c101b71fff2cabfe.stex"
 [deps]
 
 source_file="res://recursos/trilhas/trilha4.png"
+source_md5="98cdd7886cf12aebf4ab0592f496f061"
+
 dest_files=[ "res://.import/trilha4.png-c15496d97df93150c101b71fff2cabfe.stex" ]
+dest_md5="af52f1031e54881c92ce7c6a23373e79"
 
 [params]
 

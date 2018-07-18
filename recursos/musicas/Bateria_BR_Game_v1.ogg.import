@@ -7,7 +7,10 @@ path="res://.import/Bateria_BR_Game_v1.ogg-8f97b2e76ef1ecaaf8f1e364da30951c.oggs
 [deps]
 
 source_file="res://recursos/musicas/Bateria_BR_Game_v1.ogg"
+source_md5="ef68cbe351ea5180c44fa333e215e79b"
+
 dest_files=[ "res://.import/Bateria_BR_Game_v1.ogg-8f97b2e76ef1ecaaf8f1e364da30951c.oggstr" ]
+dest_md5="bee3d495c83f52bb4204ac1c09bf0b03"
 
 [params]
 

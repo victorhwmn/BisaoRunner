@@ -7,7 +7,10 @@ path="res://.import/HorizonLarge.png-16b7dda72b3acc57b8593bfdcd6e65d5.stex"
 [deps]
 
 source_file="res://recursos/cenario/HorizonLarge.png"
+source_md5="a30bfd1595c693e0031168de0cb26154"
+
 dest_files=[ "res://.import/HorizonLarge.png-16b7dda72b3acc57b8593bfdcd6e65d5.stex" ]
+dest_md5="f5387c9122c4158ae1879f579932000e"
 
 [params]
 

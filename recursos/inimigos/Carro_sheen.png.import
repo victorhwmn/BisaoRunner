@@ -7,7 +7,10 @@ path="res://.import/Carro_sheen.png-c265134e7aaefd43b3dc33b04f61dc70.stex"
 [deps]
 
 source_file="res://recursos/inimigos/Carro_sheen.png"
+source_md5="2cd3094066a06653386c44cd13ed36d8"
+
 dest_files=[ "res://.import/Carro_sheen.png-c265134e7aaefd43b3dc33b04f61dc70.stex" ]
+dest_md5="49b66245543067c599a3e3cebc73d4bb"
 
 [params]
 

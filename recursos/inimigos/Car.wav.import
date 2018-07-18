@@ -7,7 +7,10 @@ path="res://.import/Car.wav-30d96ec0ae79ff1868a7b35019bead71.sample"
 [deps]
 
 source_file="res://recursos/inimigos/Car.wav"
+source_md5="9989efaaf9944f9b31ea736088f840e9"
+
 dest_files=[ "res://.import/Car.wav-30d96ec0ae79ff1868a7b35019bead71.sample" ]
+dest_md5="6c5083fa7e2e9df1dacc12df85623184"
 
 [params]
 

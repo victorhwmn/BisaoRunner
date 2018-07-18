@@ -7,7 +7,10 @@ path="res://.import/lixeira.png-ea417b3b7b637c381c7841e6657088b8.stex"
 [deps]
 
 source_file="res://recursos/inimigos/lixeira.png"
+source_md5="184ec5a217c678c7a03a116e2c882c79"
+
 dest_files=[ "res://.import/lixeira.png-ea417b3b7b637c381c7841e6657088b8.stex" ]
+dest_md5="dae4f9ee39eb3f589c8b729d42bd5cd6"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/RuT.png-54f0073a562547b7b26aad1d638333bd.stex"
 [deps]
 
 source_file="res://recursos/items/RuT.png"
+source_md5="7288dba4d19588b240229f90e7ca3df1"
+
 dest_files=[ "res://.import/RuT.png-54f0073a562547b7b26aad1d638333bd.stex" ]
+dest_md5="f1d89e46edc7770d0b05c26db318652a"
 
 [params]
 

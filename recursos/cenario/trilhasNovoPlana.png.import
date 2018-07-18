@@ -7,7 +7,10 @@ path="res://.import/trilhasNovoPlana.png-4f0dde6a191a8f928697d660e8116b03.stex"
 [deps]
 
 source_file="res://recursos/cenario/trilhasNovoPlana.png"
+source_md5="9ad2c4845c69b2e99331329594daa94e"
+
 dest_files=[ "res://.import/trilhasNovoPlana.png-4f0dde6a191a8f928697d660e8116b03.stex" ]
+dest_md5="537d1440fb49a81e13a251be66f9e9cf"
 
 [params]
 

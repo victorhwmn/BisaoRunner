@@ -7,7 +7,10 @@ path="res://.import/start_pressed.png-1841d7612e346356358800a4563b3553.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/start_pressed.png"
+source_md5="fac45226a6f8c731fec539a0e20e71cd"
+
 dest_files=[ "res://.import/start_pressed.png-1841d7612e346356358800a4563b3553.stex" ]
+dest_md5="e46f68e45a74b2d5f65e6e63ed91b9af"
 
 [params]
 

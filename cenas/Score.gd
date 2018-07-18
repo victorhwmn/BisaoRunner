@@ -21,6 +21,9 @@ func _ready():
 			break;
 		
 	for i in range(5):
-		set_text(get_text()+str(i+1)+"º:   "+str(ranking[i])+"\n\n");
+		if(ranking[i] == 0):
+			set_text(get_text()+str(i+1)+"º:   -\n\n");
+		else:
+			set_text(get_text()+str(i+1)+"º:   "+str(ranking[i])+"\n\n");
 	
 	pass

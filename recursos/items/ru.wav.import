@@ -7,7 +7,10 @@ path="res://.import/ru.wav-49524326ec408ebc67ac6b749cf46d40.sample"
 [deps]
 
 source_file="res://recursos/items/ru.wav"
+source_md5="19d8ae07a8171ca90051591ef9784370"
+
 dest_files=[ "res://.import/ru.wav-49524326ec408ebc67ac6b749cf46d40.sample" ]
+dest_md5="c78fb430aaecf88101b7a3d4c2af0355"
 
 [params]
 

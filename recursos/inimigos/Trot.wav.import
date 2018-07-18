@@ -7,7 +7,10 @@ path="res://.import/Trot.wav-e3d91c204560fed34b77788e5072e2b8.sample"
 [deps]
 
 source_file="res://recursos/inimigos/Trot.wav"
+source_md5="f42d676c1533e5596611eecca3dbac17"
+
 dest_files=[ "res://.import/Trot.wav-e3d91c204560fed34b77788e5072e2b8.sample" ]
+dest_md5="2c05057f0b024f1f2c76d80de6e76060"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/bruce.wav-c182a9eecafbe372cb7dbdbae6431a66.sample"
 [deps]
 
 source_file="res://recursos/inimigos/bruce.wav"
+source_md5="e38f6cd8e3960c80f790a00b26b42509"
+
 dest_files=[ "res://.import/bruce.wav-c182a9eecafbe372cb7dbdbae6431a66.sample" ]
+dest_md5="bac59d4770d750de5c0c6a1bb806e450"
 
 [params]
 
