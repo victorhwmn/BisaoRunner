@@ -7,7 +7,7 @@
 [ext_resource path="res://packed/Spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=6]
 [ext_resource path="res://cenas/Pause.gd" type="Script" id=7]
-[ext_resource path="res://recursos/musicas/Bateria_BR_Game_v2.ogg" type="AudioStream" id=8]
+[ext_resource path="res://recursos/musicas/Bateria_BR_Game_v1.ogg" type="AudioStream" id=8]
 [ext_resource path="res://cenas/music.gd" type="Script" id=9]
 
 [sub_resource type="GDScript" id=1]
@@ -97,7 +97,7 @@ shader = SubResource( 7 )
 shader_param/frequency = null
 shader_param/depth = null
 
-[node name="mainGame" type="Node2D" index="0"]
+[node name="mainGame" type="Node2D"]
 
 pause_mode = 1
 script = ExtResource( 1 )
