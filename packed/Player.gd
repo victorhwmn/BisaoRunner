@@ -112,7 +112,7 @@ func _on_body_enter(other):
 		#Envia o score para o stage manager
 		stage_manager.score=pontuacao;
 		#Cria uma nova arvore de jogo e deleta a atual
-		get_tree().change_scene("res://cenas/mainMenu.tscn");
+		get_tree().change_scene("res://cenas/replay.tscn");
 	
 	elif(other.is_in_group("ItemRuim")):
 		other.hit_by_player();
