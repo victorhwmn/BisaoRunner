@@ -7,10 +7,7 @@ path="res://.import/BisRun2.svg-f0d52de3ac99e0e6b6cf46e2e479e6e9.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/BisRun2.svg"
-source_md5="416fd6c5aabdf6a1d9673dc4fc7e185d"
-
 dest_files=[ "res://.import/BisRun2.svg-f0d52de3ac99e0e6b6cf46e2e479e6e9.stex" ]
-dest_md5="ce7a050c6728f48b48e287f27ff1940b"
 
 [params]
 
