@@ -267,7 +267,6 @@ autostart = true
 
 stream = ExtResource( 9 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "BGM"
