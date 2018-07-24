@@ -45,15 +45,26 @@ func _physics_process(delta):
 	pass
 
 func _input(event):
+	var inputClick = event.is_action("ui_click") or (event.is_action_released("ui_click"));
+	var inputDireita=false;
+	var inputEsquerda=false;
 	
-	if event.is_action("ui_click") or (event.is_action_released("ui_click")):
+	if(!veneno): #Movimentação normal 
+		inputEsquerda = event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN);
+		inputDireita = event.is_action_pressed("ui_right") or (event is InputEventScreenDrag and event.relative.x>SWIPE_MIN);
+	else:        #Movimentação invertida
+		inputEsquerda = event.is_action_pressed("ui_right") or (event is InputEventScreenDrag and event.relative.x>SWIPE_MIN);
+		inputDireita = event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN);
+	
+	#Tratamento do input
+	if inputClick:
 		direcao=0;
 		get_tree().set_input_as_handled();
-	elif(event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN)):
+	elif inputEsquerda:
 		direcao=-1;
-	elif(event.is_action_pressed("ui_right") or (event is InputEventScreenDrag and event.relative.x>SWIPE_MIN)):
+	elif inputDireita:
 		direcao=1;
-	else :
+	else:
 		direcao=0;
 	pass
 
