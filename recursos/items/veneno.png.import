@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BisRun2.svg-f0d52de3ac99e0e6b6cf46e2e479e6e9.stex"
+path="res://.import/veneno.png-de265aee1eb3e0dc19b64a3287f07c82.stex"
 
 [deps]
 
-source_file="res://recursos/telaTitulo/BisRun2.svg"
-dest_files=[ "res://.import/BisRun2.svg-f0d52de3ac99e0e6b6cf46e2e479e6e9.stex" ]
+source_file="res://recursos/items/veneno.png"
+dest_files=[ "res://.import/veneno.png-de265aee1eb3e0dc19b64a3287f07c82.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
