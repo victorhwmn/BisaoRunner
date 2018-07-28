@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Horizonte.png-e2bf456b653c7cd29114dd3924afb393.stex"
+path="res://.import/ceu.png-e4f891aa7ce52199146f7734b08740bd.stex"
 
 [deps]
 
-source_file="res://recursos/cenario/Horizonte.png"
-dest_files=[ "res://.import/Horizonte.png-e2bf456b653c7cd29114dd3924afb393.stex" ]
+source_file="res://recursos/cenario/ceu.png"
+dest_files=[ "res://.import/ceu.png-e4f891aa7ce52199146f7734b08740bd.stex" ]
 
 [params]
 

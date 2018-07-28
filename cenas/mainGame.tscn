@@ -117,7 +117,6 @@ __meta__ = {
 
 [node name="Ambiente" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 71.6028, 129.589 )
 z_index = -1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -267,6 +266,7 @@ autostart = true
 
 stream = ExtResource( 9 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "BGM"
