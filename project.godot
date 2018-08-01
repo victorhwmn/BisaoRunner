@@ -26,7 +26,7 @@ window/size/test_width=360
 window/size/test_height=640
 window/handheld/orientation="portrait"
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/stretch/aspect="keep_height"
 window/stretch/shrink="1"
 
 [input]
@@ -42,5 +42,5 @@ ui_click=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resourc
 
 [rendering]
 
-environment/default_clear_color=Color( 0.135269, 0.769531, 0.234373, 1 )
+environment/default_clear_color=Color( 0.00784314, 0.788235, 1, 1 )
 environment/default_environment="res://default_env.tres"

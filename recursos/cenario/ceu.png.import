@@ -2,15 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/V.png-d81ed7d3e51d4dc776c51e4f9ca53c6f.stex"
+path="res://.import/ceu.png-e4f891aa7ce52199146f7734b08740bd.stex"
 
 [deps]
 
-source_file="res://recursos/items/V.png"
-source_md5="2e7174b39a4ffc4563ba28b16a63d9e8"
-
-dest_files=[ "res://.import/V.png-d81ed7d3e51d4dc776c51e4f9ca53c6f.stex" ]
-dest_md5="db008f3204ccddc2483a98944ddb43a7"
+source_file="res://recursos/cenario/ceu.png"
+dest_files=[ "res://.import/ceu.png-e4f891aa7ce52199146f7734b08740bd.stex" ]
 
 [params]
 
@@ -18,8 +15,8 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=true
+flags/repeat=1
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

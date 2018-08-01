@@ -8,8 +8,8 @@
 [ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=6]
 [ext_resource path="res://cenas/Pause.gd" type="Script" id=7]
 [ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.otf" type="DynamicFontData" id=8]
-[ext_resource path="res://recursos/musicas/Bateria_BR_Game_v2.ogg" type="AudioStream" id=8]
-[ext_resource path="res://cenas/music.gd" type="Script" id=9]
+[ext_resource path="res://recursos/musicas/Bateria_BR_v2.ogg" type="AudioStream" id=9]
+[ext_resource path="res://cenas/music.gd" type="Script" id=10]
 
 [sub_resource type="GDScript" id=1]
 
@@ -23,7 +23,7 @@ func _process(delta):
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 20
+size = 25
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 8 )
@@ -117,13 +117,11 @@ __meta__ = {
 
 [node name="Ambiente" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 71.6028, 129.589 )
 z_index = -1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="PontuacaoPainel" type="ParallaxBackground" parent="." index="1"]
 
-editor/display_folded = true
 layer = 2
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -193,24 +191,23 @@ position = Vector2( 72, 64 )
 
 pause_mode = 2
 script = ExtResource( 7 )
-_sections_unfolded = [ "Pause" ]
+_sections_unfolded = [ "Pause", "Z Index" ]
 
 [node name="Label" type="Label" parent="Pause" index="0"]
 
 visible = false
-anchor_left = 0.5
+anchor_left = 0.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -30.0
-margin_top = -7.0
-margin_right = 20.0
-margin_bottom = 7.0
+margin_top = -8.0
+margin_right = 11.0
+margin_bottom = 8.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
 text = "PAUSE"
@@ -219,11 +216,13 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Grow Direction" ]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Pause/Label" index="0"]
 
-color = Color( 0.570312, 0.570312, 0.570312, 1 )
+show_behind_parent = true
+color = Color( 0.292969, 0.292969, 0.292969, 1 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
 
 [node name="Distorcao" type="TextureRect" parent="." index="5"]
 
@@ -267,6 +266,7 @@ autostart = true
 
 stream = ExtResource( 9 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "BGM"

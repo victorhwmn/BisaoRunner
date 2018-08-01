@@ -45,15 +45,26 @@ func _physics_process(delta):
 	pass
 
 func _input(event):
+	var inputClick = event.is_action("ui_click") or (event.is_action_released("ui_click"));
+	var inputDireita=false;
+	var inputEsquerda=false;
 	
-	if event.is_action("ui_click") or (event.is_action_released("ui_click")):
+	if(!veneno): #Movimentação normal 
+		inputEsquerda = event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN);
+		inputDireita = event.is_action_pressed("ui_right") or (event is InputEventScreenDrag and event.relative.x>SWIPE_MIN);
+	else:        #Movimentação invertida
+		inputEsquerda = event.is_action_pressed("ui_right") or (event is InputEventScreenDrag and event.relative.x>SWIPE_MIN);
+		inputDireita = event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN);
+	
+	#Tratamento do input
+	if inputClick:
 		direcao=0;
 		get_tree().set_input_as_handled();
-	elif(event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN)):
+	elif inputEsquerda:
 		direcao=-1;
-	elif(event.is_action_pressed("ui_right") or (event is InputEventScreenDrag and event.relative.x>SWIPE_MIN)):
+	elif inputDireita:
 		direcao=1;
-	else :
+	else:
 		direcao=0;
 	pass
 
@@ -109,8 +120,10 @@ func _on_body_enter(other):
 	
 	if(other.is_in_group("Inimigo")):
 		other.hit_by_player();
+		#Envia o score para o stage manager
+		stage_manager.score=pontuacao;
 		#Cria uma nova arvore de jogo e deleta a atual
-		get_tree().change_scene("res://cenas/mainMenu.tscn");
+		get_tree().change_scene("res://cenas/replay.tscn");
 	
 	elif(other.is_in_group("ItemRuim")):
 		other.hit_by_player();
@@ -126,7 +139,7 @@ func _on_body_enter(other):
 		
 		#Exibir particulas
 		if(particulas.get_modulate().a==0):
-			var cor=Color(particulas.get_modulate().r,particulas.get_modulate().g,particulas.get_modulate().b,1)
+			var cor=Color(particulas.get_modulate().r,particulas.get_modulate().g,particulas.get_modulate().b,1);
 			get_node("Particles2D").set_modulate(cor);
 			
 		#Emitir particulas

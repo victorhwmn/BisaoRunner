@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://recursos/items/V.png" type="Texture" id=1]
+[ext_resource path="res://recursos/items/veneno.png" type="Texture" id=1]
 [ext_resource path="res://recursos/items/ru.wav" type="AudioStream" id=2]
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=1]
 
 script/source = "extends RigidBody2D
 #Item VENENO
@@ -34,12 +34,12 @@ func hit_by_player():
 	pass
 "
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 15.3306, 16.0448 )
 
-[node name="Item" type="RigidBody2D"]
+[node name="Item" type="RigidBody2D" index="0"]
 
 position = Vector2( 0, -16 )
 input_pickable = false
@@ -60,7 +60,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-script = SubResource( 2 )
+script = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -69,12 +69,11 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 z_index = 1
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -82,6 +81,7 @@ _sections_unfolded = [ "Transform" ]
 
 stream = ExtResource( 2 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0

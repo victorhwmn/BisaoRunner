@@ -22,5 +22,5 @@ func _ready():
 
 
 func onPressed() :
-	stage_manager.change_stage(stage_manager.STAGE_MENU)
+	stage_manager.change_stage(stage_manager.STAGE_GAME)
 	pass
