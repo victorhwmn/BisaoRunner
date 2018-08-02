@@ -7,7 +7,10 @@ path="res://.import/veneno.png-de265aee1eb3e0dc19b64a3287f07c82.stex"
 [deps]
 
 source_file="res://recursos/items/veneno.png"
+source_md5="8f210221f01b5b81e2c845cc68269d3e"
+
 dest_files=[ "res://.import/veneno.png-de265aee1eb3e0dc19b64a3287f07c82.stex" ]
+dest_md5="bf27ec0026b28dd2f4bfeee7ae98119f"
 
 [params]
 

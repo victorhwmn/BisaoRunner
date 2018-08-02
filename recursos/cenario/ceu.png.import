@@ -7,7 +7,10 @@ path="res://.import/ceu.png-e4f891aa7ce52199146f7734b08740bd.stex"
 [deps]
 
 source_file="res://recursos/cenario/ceu.png"
+source_md5="b17b44b9e7bbd5063d661bec15174cf8"
+
 dest_files=[ "res://.import/ceu.png-e4f891aa7ce52199146f7734b08740bd.stex" ]
+dest_md5="3de211c9c801c4a249bd5bdfec5648a1"
 
 [params]
 
