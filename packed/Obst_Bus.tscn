@@ -7,9 +7,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 45.0156, 31.5918 )
+extents = Vector2( 45.0156, 45.0355 )
 
-[node name="Obstaculo" type="RigidBody2D"]
+[node name="Obstaculo" type="RigidBody2D" index="0"]
 
 position = Vector2( 25, -60 )
 input_pickable = false
@@ -35,7 +35,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0, 24 )
+position = Vector2( 0, 10 )
 scale = Vector2( 1, 1.11619 )
 z_index = 1
 shape = SubResource( 1 )
@@ -50,6 +50,7 @@ _sections_unfolded = [ "Offset" ]
 
 stream = ExtResource( 3 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
