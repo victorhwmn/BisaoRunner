@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://cenas/mainGame.gd" type="Script" id=1]
-[ext_resource path="res://packed/Ambiente.tscn" type="PackedScene" id=2]
-[ext_resource path="res://packed/UI_in_game.tscn" type="PackedScene" id=3]
-[ext_resource path="res://packed/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://packed/Spawner.tscn" type="PackedScene" id=5]
-[ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=6]
-[ext_resource path="res://cenas/Pause.gd" type="Script" id=7]
+[ext_resource path="res://packed/pause.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed/Ambiente.tscn" type="PackedScene" id=3]
+[ext_resource path="res://packed/UI_in_game.tscn" type="PackedScene" id=4]
+[ext_resource path="res://packed/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://packed/Spawner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=7]
 [ext_resource path="res://recursos/musicas/Bateria_BR_v2.ogg" type="AudioStream" id=8]
 [ext_resource path="res://cenas/music.gd" type="Script" id=9]
 
@@ -106,13 +106,23 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 0.284847, -23.4013 ]
 }
 
-[node name="Ambiente" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Pause" parent="." index="0" instance=ExtResource( 2 )]
+
+visible = false
+margin_left = 6.0
+margin_top = 96.0
+margin_right = 81.0
+margin_bottom = 112.0
+_sections_unfolded = [ "Grow Direction", "Rect" ]
+
+[node name="Ambiente" parent="." index="1" instance=ExtResource( 3 )]
 
 z_index = -1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="PontuacaoPainel" type="ParallaxBackground" parent="." index="1"]
+[node name="PontuacaoPainel" type="ParallaxBackground" parent="." index="2"]
 
+editor/display_folded = true
 layer = 2
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -126,15 +136,16 @@ scroll_limit_end = Vector2( 168, 0 )
 scroll_ignore_camera_zoom = false
 _sections_unfolded = [ "Scroll" ]
 
-[node name="PanelContainer" parent="PontuacaoPainel" index="0" instance=ExtResource( 3 )]
+[node name="PanelContainer" parent="PontuacaoPainel" index="0" instance=ExtResource( 4 )]
 
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -72.0
 margin_right = 72.0
 
-[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Player" parent="." index="3" instance=ExtResource( 5 )]
 
+editor/display_folded = true
 position = Vector2( 72, 200 )
 contacts_reported = 1
 contact_monitor = true
@@ -175,19 +186,13 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit", "Smoothing" ]
 
-[node name="Spawner" parent="." index="3" instance=ExtResource( 5 )]
+[node name="Spawner" parent="." index="4" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 
-[node name="Caminhos" parent="Spawner" index="0" instance=ExtResource( 6 )]
+[node name="Caminhos" parent="Spawner" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 72, 64 )
-
-[node name="Pause" type="Node" parent="." index="4"]
-
-pause_mode = 2
-script = ExtResource( 7 )
-_sections_unfolded = [ "Pause", "Z Index" ]
 
 [node name="Distorcao" type="TextureRect" parent="." index="5"]
 

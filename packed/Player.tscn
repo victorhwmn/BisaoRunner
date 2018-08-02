@@ -118,7 +118,7 @@ __meta__ = {
 
 modulate = Color( 1, 1, 1, 0 )
 z_index = 1
-emitting = true
+emitting = false
 amount = 5
 lifetime = 1.5
 one_shot = true
@@ -181,7 +181,7 @@ visible = false
 scale = Vector2( 0.1, 0.12 )
 frames = SubResource( 6 )
 animation = "default"
-frame = 4
+frame = 2
 playing = true
 script = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]

@@ -45,7 +45,7 @@ func _physics_process(delta):
 	pass
 
 func _input(event):
-	var inputClick = event.is_action("ui_click") or (event.is_action_released("ui_click"));
+	var inputClick = false;#event.is_action("ui_click") or (event.is_action_released("ui_click"));
 	var inputDireita=false;
 	var inputEsquerda=false;
 	
