@@ -1,11 +1,9 @@
-# TRABALHO PRATICO - Computação Gráfica
-Trabalho prático de Computação Gráfica desenvolvida por alunos da UFSCar - Sorocaba
+# Bisao Runner
+Jogo de corrida 2D com o bisao da computacao desenvolvido por alunos da UFSCar - Sorocaba
 
 Alunos:  
-* [Lucas Penteado Sacchi](http://github.com/lucaspsacchi)
-* [Michael dos Santos](https://github.com/Michael-Santos)
+* [Anderson Pinheiro Garrote](http://github.com/andersongarrote)
+* [André Matheus Bariani Trava](https://github.com/Michael-Santos)
 * [Victor Watanabe](https://github.com/victorhwmn)
-
-
-Professor: Mario Lizier
-
+* Mariane Lemos Malheiros
+* Isabella Lima
