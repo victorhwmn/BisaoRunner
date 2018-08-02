@@ -145,7 +145,6 @@ margin_right = 72.0
 
 [node name="Player" parent="." index="3" instance=ExtResource( 5 )]
 
-editor/display_folded = true
 position = Vector2( 72, 200 )
 contacts_reported = 1
 contact_monitor = true

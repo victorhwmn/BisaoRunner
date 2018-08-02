@@ -13,5 +13,5 @@ func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 	var points = get_node("/root/mainGame/Player").pontuacao
-	set_text(" " + str(points*100000));
+	set_text(" " + str(points));
 	pass

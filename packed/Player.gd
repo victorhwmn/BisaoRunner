@@ -45,7 +45,7 @@ func _physics_process(delta):
 	pass
 
 func _input(event):
-	var inputClick = false;#event.is_action("ui_click") or (event.is_action_released("ui_click"));
+	
 	var inputDireita=false;
 	var inputEsquerda=false;
 	
@@ -57,10 +57,7 @@ func _input(event):
 		inputDireita = event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN);
 	
 	#Tratamento do input
-	if inputClick:
-		direcao=0;
-		get_tree().set_input_as_handled();
-	elif inputEsquerda:
+	if inputEsquerda:
 		direcao=-1;
 	elif inputDireita:
 		direcao=1;
