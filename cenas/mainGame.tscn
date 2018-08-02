@@ -97,7 +97,7 @@ shader = SubResource( 7 )
 shader_param/frequency = null
 shader_param/depth = null
 
-[node name="mainGame" type="Node2D" index="0"]
+[node name="mainGame" type="Node2D"]
 
 pause_mode = 1
 script = ExtResource( 1 )
@@ -188,8 +188,6 @@ _sections_unfolded = [ "Limit", "Smoothing" ]
 
 [node name="Spawner" parent="." index="4" instance=ExtResource( 6 )]
 
-editor/display_folded = true
-
 [node name="Caminhos" parent="Spawner" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 72, 64 )
@@ -236,7 +234,6 @@ autostart = true
 
 stream = ExtResource( 8 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "BGM"
