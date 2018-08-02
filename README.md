@@ -3,7 +3,7 @@ Jogo de corrida 2D com o bisao da computacao desenvolvido por alunos da UFSCar -
 
 Alunos:  
 * [Anderson Pinheiro Garrote](http://github.com/andersongarrote)
-* [André Matheus Bariani Trava](https://github.com/Michael-Santos)
+* [André Matheus Bariani Trava](https://github.com/andrebariani)
 * [Victor Watanabe](https://github.com/victorhwmn)
 * Mariane Lemos Malheiros
 * Isabella Lima
