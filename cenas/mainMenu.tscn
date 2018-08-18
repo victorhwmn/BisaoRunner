@@ -10,7 +10,7 @@
 [ext_resource path="res://recursos/telaTitulo/ButtonInfo_press.png" type="Texture" id=8]
 [ext_resource path="res://cenas/btn_info.gd" type="Script" id=9]
 [ext_resource path="res://recursos/trilhas/trilha4.png" type="Texture" id=10]
-[ext_resource path="res://recursos/telaTitulo/BisionFront.png" type="Texture" id=11]
+[ext_resource path="res://recursos/player/Bision.png" type="Texture" id=11]
 [ext_resource path="res://recursos/musicas/Bateria_BR_Menu.ogg" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
@@ -141,7 +141,7 @@ _sections_unfolded = [ "Focus", "Mouse", "Pause", "Size Flags", "Textures", "The
 
 frames = SubResource( 3 )
 animation = "default"
-frame = 1
+frame = 3
 playing = true
 centered = false
 
