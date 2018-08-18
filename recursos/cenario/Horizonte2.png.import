@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Horizonte.png-e2bf456b653c7cd29114dd3924afb393.stex"
+path="res://.import/Horizonte2.png-185318f3771a144b413559b583f5de24.stex"
 
 [deps]
 
-source_file="res://recursos/cenario/Horizonte.png"
-dest_files=[ "res://.import/Horizonte.png-e2bf456b653c7cd29114dd3924afb393.stex" ]
+source_file="res://recursos/cenario/Horizonte2.png"
+dest_files=[ "res://.import/Horizonte2.png-185318f3771a144b413559b583f5de24.stex" ]
 
 [params]
 
@@ -15,8 +15,8 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=false
+flags/repeat=0
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

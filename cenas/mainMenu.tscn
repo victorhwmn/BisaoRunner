@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://recursos/telaTitulo/BisRun2.svg" type="Texture" id=1]
 [ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.ttf" type="DynamicFontData" id=2]
@@ -9,10 +9,9 @@
 [ext_resource path="res://recursos/telaTitulo/ButtonInfo_normal.png" type="Texture" id=7]
 [ext_resource path="res://recursos/telaTitulo/ButtonInfo_press.png" type="Texture" id=8]
 [ext_resource path="res://cenas/btn_info.gd" type="Script" id=9]
-[ext_resource path="res://recursos/cenario/Horizonte.png" type="Texture" id=10]
-[ext_resource path="res://recursos/trilhas/trilha4.png" type="Texture" id=11]
-[ext_resource path="res://recursos/telaTitulo/BisionFront.png" type="Texture" id=12]
-[ext_resource path="res://recursos/musicas/Bateria_BR_Menu.ogg" type="AudioStream" id=13]
+[ext_resource path="res://recursos/trilhas/trilha4.png" type="Texture" id=10]
+[ext_resource path="res://recursos/telaTitulo/BisionFront.png" type="Texture" id=11]
+[ext_resource path="res://recursos/musicas/Bateria_BR_Menu.ogg" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -41,7 +40,7 @@ render_priority = 0
 blend_mode = 0
 light_mode = 1
 
-[node name="mainMenu" type="Node"]
+[node name="mainMenu" type="Node" index="0"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ 72.0217 ]
@@ -142,7 +141,7 @@ _sections_unfolded = [ "Focus", "Mouse", "Pause", "Size Flags", "Textures", "The
 
 frames = SubResource( 3 )
 animation = "default"
-frame = 3
+frame = 1
 playing = true
 centered = false
 
@@ -170,35 +169,27 @@ texture_pressed = ExtResource( 8 )
 script = ExtResource( 9 )
 _sections_unfolded = [ "Anchor", "Focus", "Margin", "Mouse", "Pause", "Rect", "Size Flags", "Textures", "Theme", "Visibility" ]
 
-[node name="Ambiente" type="Node" parent="." index="2"]
-
-[node name="Horizonte" type="Sprite" parent="Ambiente" index="0"]
-
-position = Vector2( 72, 128 )
-scale = Vector2( 1.5, 1 )
-texture = ExtResource( 10 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Pista" type="Sprite" parent="." index="3"]
+[node name="Pista" type="Sprite" parent="." index="2"]
 
 position = Vector2( 72, 128 )
 z_index = 1
-texture = ExtResource( 11 )
-normal_map = ExtResource( 11 )
+texture = ExtResource( 10 )
+normal_map = ExtResource( 10 )
 
-[node name="Logo" type="Sprite" parent="." index="4"]
+[node name="Logo" type="Sprite" parent="." index="3"]
 
 material = SubResource( 4 )
 position = Vector2( 72, 192 )
 z_index = 1
 z_as_relative = false
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
-[node name="bgm" type="AudioStreamPlayer" parent="." index="5"]
+[node name="bgm" type="AudioStreamPlayer" parent="." index="4"]
 
-stream = ExtResource( 13 )
+stream = ExtResource( 12 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
