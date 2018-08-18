@@ -10,7 +10,6 @@ func _process(delta):
 	var pitch_shift_value = max(1*sin(gambi*0.15) + 1 , 0.5)
 	if filtro_corote.visible == true:
 		pitch.set_pitch_scale(pitch_shift_value)
-		print(pitch_shift_value)
 		
 	else:
 		#self.volume_db = 0

@@ -66,7 +66,7 @@ func _input(event):
 		inputEsquerda = event.is_action_pressed("ui_right") or (event is InputEventScreenDrag and event.relative.x>SWIPE_MIN);
 		inputDireita = event.is_action_pressed("ui_left") or (event is InputEventScreenDrag and event.relative.x<-SWIPE_MIN);
 	
-	inputCima = event.is_action_pressed("ui_up");
+	inputCima = event.is_action_pressed("ui_up") or (event is InputEventScreenDrag and event.relative.y<-SWIPE_MIN);
 	
 	#Tratamento do input
 	if inputEsquerda:

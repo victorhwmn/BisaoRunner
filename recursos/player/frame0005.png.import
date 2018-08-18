@@ -7,10 +7,7 @@ path="res://.import/frame0005.png-8a83262c64b70c6bcfe5a68d2d41e658.stex"
 [deps]
 
 source_file="res://recursos/player/frame0005.png"
-source_md5="777e2c15c62598fe4b57c9dcd7277a5b"
-
 dest_files=[ "res://.import/frame0005.png-8a83262c64b70c6bcfe5a68d2d41e658.stex" ]
-dest_md5="03ddcfb1b36f9cc418ea9b68481f5017"
 
 [params]
 
@@ -19,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

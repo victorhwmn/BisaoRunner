@@ -5,7 +5,7 @@ func _ready():
 
 func _process(delta):
 	#Recebe a velocidade do player
-	var veloc = get_node("/root/mainGame/Player").velocidade/60
+	var veloc = get_node("/root/mainGame/Player").velocidade/40
 	#Define como velocidae da animação
 	frames.set_animation_speed("default",veloc);
 	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://cenas/mainGame.gd" type="Script" id=1]
 [ext_resource path="res://packed/pause.tscn" type="PackedScene" id=2]
@@ -20,42 +20,6 @@ func _ready():
 func _process(delta):
 	pass"
 
-[sub_resource type="Shader" id=2]
-
-code = "shader_type canvas_item;
-
-uniform float frequency=90;
-uniform float depth = 0.005;
-
-void fragment() {
-	
-	vec2 uv = SCREEN_UV;
-	uv.x += sin(uv.y*frequency+TIME)*depth;
-	uv.x = clamp(uv.x,0,1);
-	vec3 c = textureLod(SCREEN_TEXTURE,uv,0.0).rgb;
-	
-	
-	COLOR.rgb=c;
-}"
-
-[sub_resource type="ShaderMaterial" id=3]
-
-render_priority = 0
-shader = SubResource( 2 )
-shader_param/frequency = null
-shader_param/depth = null
-
-[sub_resource type="Gradient" id=4]
-
-offsets = PoolRealArray( 0 )
-colors = PoolColorArray( 1, 1, 1, 1 )
-
-[sub_resource type="GradientTexture" id=5]
-
-flags = 4
-gradient = SubResource( 4 )
-width = 100
-
 [sub_resource type="GDScript" id=6]
 
 script/source = "extends TextureRect
@@ -71,33 +35,9 @@ func _on_Timer_timeout():
 	player.set_rotation_degrees(0);
 	pass # replace with function body
 "
+_sections_unfolded = [ "Resource" ]
 
-[sub_resource type="Shader" id=7]
-
-code = "shader_type canvas_item;
-
-uniform float frequency=60;
-uniform float depth = 0.05;
-
-void fragment() {
-	
-	vec2 uv = SCREEN_UV;
-	uv.x += sin(uv.y*frequency+TIME)*depth;
-	uv.x = clamp(uv.x,0,1);
-	vec3 c = textureLod(SCREEN_TEXTURE,uv,0.0).rgb;
-	
-	
-	COLOR.rgb=c;
-}"
-
-[sub_resource type="ShaderMaterial" id=8]
-
-render_priority = 1
-shader = SubResource( 7 )
-shader_param/frequency = null
-shader_param/depth = null
-
-[node name="mainGame" type="Node2D"]
+[node name="mainGame" type="Node2D" index="0"]
 
 pause_mode = 1
 script = ExtResource( 1 )
@@ -193,9 +133,7 @@ position = Vector2( 72, 64 )
 
 [node name="Distorcao" type="TextureRect" parent="." index="5"]
 
-editor/display_folded = true
 visible = false
-material = SubResource( 3 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -209,20 +147,11 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = SubResource( 5 )
-expand = true
 stretch_mode = 0
 script = SubResource( 6 )
-_sections_unfolded = [ "Grow Direction", "Material", "Rect", "Size Flags" ]
+_sections_unfolded = [ "Rect" ]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="Distorcao" index="0"]
-
-material = SubResource( 8 )
-scale = Vector2( 0.1, 0.1 )
-color = Color( 0.84375, 1, 0.926758, 1 )
-_sections_unfolded = [ "Material" ]
-
-[node name="Timer" type="Timer" parent="Distorcao" index="1"]
+[node name="Timer" type="Timer" parent="Distorcao" index="0"]
 
 process_mode = 1
 wait_time = 5.0
@@ -233,6 +162,7 @@ autostart = true
 
 stream = ExtResource( 8 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "BGM"
