@@ -48,7 +48,6 @@ __meta__ = {
 
 [node name="Titulo" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 72, 50 )
 scale = Vector2( 0.12, 0.12 )
 z_index = 2
@@ -76,7 +75,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 10
 custom_constants/shadow_offset_y = 10
 custom_constants/shadow_as_outline = 10
-text = "Beta 0.1"
+text = "v 1.0"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -141,7 +140,7 @@ _sections_unfolded = [ "Focus", "Mouse", "Pause", "Size Flags", "Textures", "The
 
 frames = SubResource( 3 )
 animation = "default"
-frame = 2
+frame = 3
 playing = true
 centered = false
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ButtonRepaly.png-2aaf94e6ad8384680f1a15b3053705ec.stex"
+path="res://.import/ButtonHome.png-c1f4de9d8a0586f1ba09c13108191d92.stex"
 
 [deps]
 
-source_file="res://recursos/telaTitulo/ButtonRepaly.png"
-dest_files=[ "res://.import/ButtonRepaly.png-2aaf94e6ad8384680f1a15b3053705ec.stex" ]
+source_file="res://recursos/telaTitulo/ButtonHome.png"
+dest_files=[ "res://.import/ButtonHome.png-c1f4de9d8a0586f1ba09c13108191d92.stex" ]
 
 [params]
 

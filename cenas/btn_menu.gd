@@ -17,7 +17,7 @@ func _ready():
 	pass
 	
 func _input(event):
-	if event.is_action("ui_accept"):
+	if event.is_action("ui_cancel"):
 		onPressed();
 
 #func _process(delta):
@@ -26,5 +26,5 @@ func _input(event):
 
 
 func onPressed() :
-	stage_manager.change_stage(stage_manager.STAGE_GAME)
+	stage_manager.change_stage(stage_manager.STAGE_MENU)
 	pass
