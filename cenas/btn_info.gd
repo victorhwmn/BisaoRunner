@@ -19,7 +19,9 @@ func _ready():
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	pass
-
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		onPressed();
 
 func onPressed() :
 	stage_manager.change_stage(stage_manager.STAGE_CREDITS)

@@ -1,4 +1,3 @@
-# script btn_info
 
 extends TextureButton
 
@@ -17,7 +16,7 @@ func _ready():
 	pass
 	
 func _input(event):
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_accept"):
 		onPressed();
 
 #func _process(delta):
@@ -26,5 +25,5 @@ func _input(event):
 
 
 func onPressed() :
-	stage_manager.change_stage(stage_manager.STAGE_MENU)
+	stage_manager.change_stage(stage_manager.STAGE_GAME)
 	pass
