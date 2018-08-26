@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://packed/Obst_Car.gd" type="Script" id=1]
-[ext_resource path="res://recursos/inimigos/Carro.png" type="Texture" id=2]
+[ext_resource path="res://recursos/inimigos/Carro_sheen.png" type="Texture" id=2]
 [ext_resource path="res://recursos/inimigos/Car.wav" type="AudioStream" id=3]
 [ext_resource path="res://recursos/inimigos/Car Honk.wav" type="AudioStream" id=4]
 
