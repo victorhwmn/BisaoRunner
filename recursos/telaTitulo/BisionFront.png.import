@@ -7,7 +7,10 @@ path="res://.import/BisionFront.png-b4d279b40967ef38db23dae3542ad437.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/BisionFront.png"
+source_md5="acb0b44b547d45827291e8e575f7125b"
+
 dest_files=[ "res://.import/BisionFront.png-b4d279b40967ef38db23dae3542ad437.stex" ]
+dest_md5="6bbfeaa07bfc3db0908af2210f7c123c"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/Horizonte0.png-645426fd5933b2a29fcb4b5471165c22.stex"
 [deps]
 
 source_file="res://recursos/cenario/Horizonte0.png"
+source_md5="bb7bf7ec493b6d3aa070a43f625e647a"
+
 dest_files=[ "res://.import/Horizonte0.png-645426fd5933b2a29fcb4b5471165c22.stex" ]
+dest_md5="8f43fa7c5cfc8474b502c4b18dbfa6f6"
 
 [params]
 

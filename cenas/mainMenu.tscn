@@ -40,7 +40,7 @@ render_priority = 0
 blend_mode = 0
 light_mode = 1
 
-[node name="mainMenu" type="Node" index="0"]
+[node name="mainMenu" type="Node"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ 72.0217 ]
@@ -181,7 +181,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 stream = ExtResource( 11 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

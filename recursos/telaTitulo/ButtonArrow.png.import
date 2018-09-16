@@ -7,7 +7,10 @@ path="res://.import/ButtonArrow.png-b3233ec60203db3cd1076ca3f963a714.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/ButtonArrow.png"
+source_md5="cecadc89e8bbaaa5bc1f72c4f6d391da"
+
 dest_files=[ "res://.import/ButtonArrow.png-b3233ec60203db3cd1076ca3f963a714.stex" ]
+dest_md5="900bd9b1f3161c4b863bc4da6d02cce5"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/ButtonRepaly.png-2aaf94e6ad8384680f1a15b3053705ec.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/ButtonRepaly.png"
+source_md5="bde4dc33eddbcf207e1b10158edae938"
+
 dest_files=[ "res://.import/ButtonRepaly.png-2aaf94e6ad8384680f1a15b3053705ec.stex" ]
+dest_md5="169e837902e860c96d209b1c75e09bfd"
 
 [params]
 

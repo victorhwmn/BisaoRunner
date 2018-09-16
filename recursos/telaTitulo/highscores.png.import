@@ -7,7 +7,10 @@ path="res://.import/highscores.png-7bb55df7a751fd2ab10a23aecd8763d4.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/highscores.png"
+source_md5="aa6bd563bf185cc3def6afb4a7fb5ba5"
+
 dest_files=[ "res://.import/highscores.png-7bb55df7a751fd2ab10a23aecd8763d4.stex" ]
+dest_md5="6d0804f13d79ac9a713e3dca0bf0631b"
 
 [params]
 
