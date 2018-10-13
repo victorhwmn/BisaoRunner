@@ -1,15 +1,25 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://packed/Obst_2.gd" type="Script" id=1]
-[ext_resource path="res://recursos/inimigos/tinyDogo.png" type="Texture" id=2]
+[ext_resource path="res://recursos/inimigos/tinyDogo1.png" type="Texture" id=2]
 [ext_resource path="res://recursos/inimigos/bruce.wav" type="AudioStream" id=3]
+[ext_resource path="res://recursos/inimigos/tinyDogo.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12.905, 8.18412 )
 
-[node name="Obstaculo" type="RigidBody2D"]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Obstaculo" type="RigidBody2D" index="0"]
 
 position = Vector2( 0, -16 )
 input_pickable = false
@@ -45,16 +55,24 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
+visible = false
 texture = ExtResource( 2 )
 
 [node name="sfx" type="AudioStreamPlayer2D" parent="." index="2"]
 
 stream = ExtResource( 3 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="3"]
+
+frames = SubResource( 2 )
+animation = "default"
+playing = true
 
 
