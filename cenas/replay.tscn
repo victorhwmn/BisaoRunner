@@ -40,7 +40,6 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFontData" id=5]
 
-hinting = 2
 font_path = "res://recursos/Fonte-Upheaval/UpheavalPro.ttf"
 
 [sub_resource type="DynamicFont" id=6]
@@ -51,7 +50,7 @@ use_filter = false
 font_data = SubResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="mainMenu" type="Node" index="0"]
+[node name="mainMenu" type="Node"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ 72.0217 ]
@@ -115,7 +114,7 @@ custom_constants/line_spacing = 40
 align = 1
 valign = 3
 autowrap = true
-percent_visible = -1.0
+percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 5 )

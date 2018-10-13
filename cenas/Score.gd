@@ -25,5 +25,6 @@ func _ready():
 			set_text(get_text()+str(i+1)+"º 0\n");
 		else:
 			set_text(get_text()+str(i+1)+"º "+str(ranking[i])+"\n");
+	stage_manager.save_game()
 	
 	pass

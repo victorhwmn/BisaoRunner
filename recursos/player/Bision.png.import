@@ -7,7 +7,10 @@ path="res://.import/Bision.png-56b674f8b950a369fa8bab30326da073.stex"
 [deps]
 
 source_file="res://recursos/player/Bision.png"
+source_md5="68847c11104daf462bbc8cfe8465afa0"
+
 dest_files=[ "res://.import/Bision.png-56b674f8b950a369fa8bab30326da073.stex" ]
+dest_md5="ce8d533a337eb291dc6cdbb74de67d30"
 
 [params]
 

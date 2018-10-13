@@ -7,7 +7,10 @@ path="res://.import/ButtonHome.png-c1f4de9d8a0586f1ba09c13108191d92.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/ButtonHome.png"
+source_md5="38517007e3442af23b8a2b8498a6342f"
+
 dest_files=[ "res://.import/ButtonHome.png-c1f4de9d8a0586f1ba09c13108191d92.stex" ]
+dest_md5="451fb205b822e20097edbb6b4e5047ea"
 
 [params]
 
