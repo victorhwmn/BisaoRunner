@@ -1,16 +1,17 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://recursos/telaTitulo/BisRun2.svg" type="Texture" id=1]
 [ext_resource path="res://recursos/telaTitulo/BisionFront.png" type="Texture" id=2]
-[ext_resource path="res://recursos/telaTitulo/highscores.png" type="Texture" id=3]
-[ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.otf" type="DynamicFontData" id=4]
-[ext_resource path="res://cenas/Score.gd" type="Script" id=5]
-[ext_resource path="res://cenas/Player.gd" type="Script" id=6]
-[ext_resource path="res://recursos/telaTitulo/ButtonRepaly.png" type="Texture" id=7]
-[ext_resource path="res://cenas/btn_replay.gd" type="Script" id=8]
-[ext_resource path="res://recursos/telaTitulo/ButtonHome.png" type="Texture" id=9]
-[ext_resource path="res://cenas/btn_menu.gd" type="Script" id=10]
-[ext_resource path="res://packed/AmbienteMenus.tscn" type="PackedScene" id=11]
+[ext_resource path="res://recursos/telaTitulo/qrCodeBisao.jpeg" type="Texture" id=3]
+[ext_resource path="res://recursos/telaTitulo/highscores.png" type="Texture" id=4]
+[ext_resource path="res://recursos/Fonte-Upheaval/UpheavalPro.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://cenas/Score.gd" type="Script" id=6]
+[ext_resource path="res://cenas/Player.gd" type="Script" id=7]
+[ext_resource path="res://recursos/telaTitulo/ButtonRepaly.png" type="Texture" id=8]
+[ext_resource path="res://cenas/btn_replay.gd" type="Script" id=9]
+[ext_resource path="res://recursos/telaTitulo/ButtonHome.png" type="Texture" id=10]
+[ext_resource path="res://cenas/btn_menu.gd" type="Script" id=11]
+[ext_resource path="res://packed/AmbienteMenus.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -30,27 +31,28 @@ render_priority = 0
 blend_mode = 0
 light_mode = 1
 
+[sub_resource type="DynamicFontData" id=5]
+
+hinting = 2
+font_path = "res://recursos/Fonte-Upheaval/UpheavalPro.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 20
+use_mipmaps = true
+use_filter = false
+font_data = SubResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [sub_resource type="DynamicFont" id=4]
 
 size = 135
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=5]
-
-font_path = "res://recursos/Fonte-Upheaval/UpheavalPro.ttf"
-
-[sub_resource type="DynamicFont" id=6]
-
-size = 200
-use_mipmaps = false
-use_filter = false
-font_data = SubResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[node name="mainMenu" type="Node"]
+[node name="mainMenu" type="Node" index="0"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ 72.0217 ]
@@ -81,6 +83,43 @@ z_as_relative = false
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
+[node name="QRcode" type="Sprite" parent="Titulo/Logo" index="0"]
+
+use_parent_material = true
+position = Vector2( 0, 16 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="link" type="Label" parent="Titulo/Logo" index="1"]
+
+material = SubResource( 3 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -411.0
+margin_top = -9.0
+margin_right = 347.0
+margin_bottom = 41.0
+rect_rotation = -0.0743547
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.866667, 0.854902, 0.992157, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.466667, 0, 1 )
+text = "Baixe Agora!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
 [node name="Placar" type="Sprite" parent="Titulo" index="1"]
 
 use_parent_material = true
@@ -88,7 +127,7 @@ position = Vector2( -17, 732 )
 rotation = 3.14159
 scale = Vector2( 15, 15 )
 z_index = -1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Score" type="Label" parent="Titulo" index="2"]
@@ -117,7 +156,7 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Material", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="Player" type="Label" parent="Titulo" index="3"]
@@ -147,7 +186,7 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Margin", "Material", "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="final" type="Label" parent="Titulo" index="4"]
@@ -180,34 +219,6 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "Material", "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
-
-[node name="High" type="Label" parent="Titulo" index="5"]
-
-material = SubResource( 3 )
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -110.0
-margin_top = -146.5
-margin_right = 960.0
-margin_bottom = -26.5
-rect_rotation = 90.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "HIGHCORES"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Size Flags", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="hud" type="CanvasLayer" parent="." index="2"]
 
@@ -256,8 +267,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Anchor", "Focus", "Margin", "Mouse", "Pause", "Rect", "Size Flags", "Textures", "Theme", "Visibility" ]
 
 [node name="btn_menu" type="TextureButton" parent="hud" index="2"]
@@ -280,10 +291,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 9 )
-script = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+script = ExtResource( 11 )
 _sections_unfolded = [ "Anchor", "Focus", "Margin", "Mouse", "Pause", "Rect", "Size Flags", "Textures", "Theme", "Visibility" ]
 
-[node name="Ambiente" parent="." index="3" instance=ExtResource( 11 )]
+[node name="Ambiente" parent="." index="3" instance=ExtResource( 12 )]
 
 
