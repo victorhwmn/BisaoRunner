@@ -7,7 +7,10 @@ path="res://.import/tinyDogo1.png-181d23e029db5b042edb5c0d792ae303.stex"
 [deps]
 
 source_file="res://recursos/inimigos/tinyDogo1.png"
+source_md5="0651bbf9602b9a110acfdb751d6e6bfe"
+
 dest_files=[ "res://.import/tinyDogo1.png-181d23e029db5b042edb5c0d792ae303.stex" ]
+dest_md5="850deb776927bc5f497ef2fb555fcfe8"
 
 [params]
 

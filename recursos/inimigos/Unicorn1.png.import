@@ -7,7 +7,10 @@ path="res://.import/Unicorn1.png-476b1398a47a2bc795cba7188e5fb707.stex"
 [deps]
 
 source_file="res://recursos/inimigos/Unicorn1.png"
+source_md5="76b961941f9bd281e2ece838c0f56fb7"
+
 dest_files=[ "res://.import/Unicorn1.png-476b1398a47a2bc795cba7188e5fb707.stex" ]
+dest_md5="738851315608389b857f282a8ea54781"
 
 [params]
 

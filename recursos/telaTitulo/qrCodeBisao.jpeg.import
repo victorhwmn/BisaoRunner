@@ -7,7 +7,10 @@ path="res://.import/qrCodeBisao.jpeg-9b22df3bbefe5633d807859dd8bf1eb1.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/qrCodeBisao.jpeg"
+source_md5="24f04f0229632a470181811dc2be3ef0"
+
 dest_files=[ "res://.import/qrCodeBisao.jpeg-9b22df3bbefe5633d807859dd8bf1eb1.stex" ]
+dest_md5="df2d7292366265e171d65b166d9fc61e"
 
 [params]
 

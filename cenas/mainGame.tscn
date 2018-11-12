@@ -37,7 +37,7 @@ func _on_Timer_timeout():
 "
 _sections_unfolded = [ "Resource" ]
 
-[node name="mainGame" type="Node2D" index="0"]
+[node name="mainGame" type="Node2D"]
 
 pause_mode = 1
 script = ExtResource( 1 )
@@ -162,7 +162,6 @@ autostart = true
 
 stream = ExtResource( 8 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "BGM"
