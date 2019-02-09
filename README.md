@@ -1,7 +1,7 @@
 # Bisao Runner
 Jogo de corrida 2D com o bisao da computacao desenvolvido por alunos da UFSCar - Sorocaba
 
-Alunos:  
+Integrantes:  
 * [Anderson Pinheiro Garrote](http://github.com/andersongarrote)
 * [André Matheus Bariani Trava](https://github.com/andrebariani)
 * [Victor Watanabe](https://github.com/victorhwmn)
