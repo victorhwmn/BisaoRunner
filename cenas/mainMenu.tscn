@@ -9,7 +9,7 @@
 [ext_resource path="res://recursos/telaTitulo/ButtonInfo_normal.png" type="Texture" id=7]
 [ext_resource path="res://recursos/telaTitulo/ButtonInfo_press.png" type="Texture" id=8]
 [ext_resource path="res://cenas/btn_info.gd" type="Script" id=9]
-[ext_resource path="res://recursos/telaTitulo/ButtonArrow.png" type="Texture" id=10]
+[ext_resource path="res://recursos/telaTitulo/ButtonExit.png" type="Texture" id=10]
 [ext_resource path="res://cenas/ExitButton.gd" type="Script" id=11]
 [ext_resource path="res://recursos/player/Bision.png" type="Texture" id=12]
 [ext_resource path="res://recursos/musicas/Bateria_BR_Menu.ogg" type="AudioStream" id=13]
@@ -42,7 +42,7 @@ render_priority = 0
 blend_mode = 0
 light_mode = 1
 
-[node name="mainMenu" type="Node"]
+[node name="mainMenu" type="Node" index="0"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ 72.0217 ]
@@ -142,17 +142,17 @@ _sections_unfolded = [ "Focus", "Mouse", "Pause", "Size Flags", "Textures", "The
 
 frames = SubResource( 3 )
 animation = "default"
-frame = 2
+frame = 3
 playing = true
 centered = false
 
 [node name="btn_info" type="TextureButton" parent="hud" index="2"]
 
-anchor_left = 1.0
+anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -36.0
+margin_left = 108.0
 margin_top = -64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -173,13 +173,13 @@ _sections_unfolded = [ "Anchor", "Focus", "Margin", "Mouse", "Pause", "Rect", "S
 [node name="btn_exit" type="TextureButton" parent="hud" index="3"]
 
 anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 9.0
-margin_top = 195.0
-margin_right = 41.0
-margin_bottom = 227.0
+margin_top = -61.0
+margin_right = -103.0
+margin_bottom = -29.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -208,10 +208,13 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 stream = ExtResource( 13 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
 [node name="Ambiente" parent="." index="4" instance=ExtResource( 14 )]
+
+position = Vector2( 0.598724, 0.401245 )
 
 
