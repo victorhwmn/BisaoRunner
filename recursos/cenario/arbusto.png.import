@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arvore.png-5abf544d00298a6ee8cc796e62d7b52d.stex"
+path="res://.import/arbusto.png-273374e49d04653d30809f043db194fb.stex"
 
 [deps]
 
-source_file="res://recursos/cenario/arvore.png"
-dest_files=[ "res://.import/arvore.png-5abf544d00298a6ee8cc796e62d7b52d.stex" ]
+source_file="res://recursos/cenario/arbusto.png"
+dest_files=[ "res://.import/arbusto.png-273374e49d04653d30809f043db194fb.stex" ]
 
 [params]
 

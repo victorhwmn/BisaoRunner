@@ -3,7 +3,9 @@ extends Timer
 var i = 0;
 #Carrega os inimigos
 var spawn_items = [
-	preload("res://packed/Arvore.tscn")]
+	preload("res://packed/Arvore.tscn"),
+	preload("res://packed/Arvore2.tscn"),
+	preload("res://packed/Arbusto.tscn")]
 
 #Carrega o PathFollow, container com script que segue o caminho das trilhas
 var path_follow = preload("res://packed/SegueCaminho.tscn")

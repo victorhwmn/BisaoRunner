@@ -1,36 +1,47 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://recursos/cenario/ceu.png" type="Texture" id=1]
 [ext_resource path="res://recursos/cenario/montes.png" type="Texture" id=2]
-[ext_resource path="res://recursos/cenario/fundoArvores.png" type="Texture" id=3]
-[ext_resource path="res://Ambiente.tres" type="SpriteFrames" id=4]
-[ext_resource path="res://packed/AnimatedSprite.gd" type="Script" id=5]
-[ext_resource path="res://recursos/cenario/Horizonte0.png" type="Texture" id=6]
-[ext_resource path="res://recursos/cenario/Horizonte1.png" type="Texture" id=7]
-[ext_resource path="res://recursos/cenario/Horizonte2.png" type="Texture" id=8]
-[ext_resource path="res://recursos/cenario/Horizonte3.png" type="Texture" id=9]
-[ext_resource path="res://recursos/cenario/Horizonte.png" type="Texture" id=10]
-[ext_resource path="res://packed/SpwnBck.gd" type="Script" id=11]
-[ext_resource path="res://packed/Caminho -1.tscn" type="PackedScene" id=12]
-[ext_resource path="res://packed/Caminho 1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://recursos/cenario/monte0.png" type="Texture" id=3]
+[ext_resource path="res://recursos/cenario/monte1.png" type="Texture" id=4]
+[ext_resource path="res://recursos/cenario/fundoArvores.png" type="Texture" id=5]
+[ext_resource path="res://Ambiente.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://packed/AnimatedSprite.gd" type="Script" id=7]
+[ext_resource path="res://recursos/cenario/Horizonte0.png" type="Texture" id=8]
+[ext_resource path="res://recursos/cenario/Horizonte1.png" type="Texture" id=9]
+[ext_resource path="res://recursos/cenario/Horizonte2.png" type="Texture" id=10]
+[ext_resource path="res://recursos/cenario/Horizonte3.png" type="Texture" id=11]
+[ext_resource path="res://recursos/cenario/Horizonte.png" type="Texture" id=12]
+[ext_resource path="res://packed/SpwnBck.gd" type="Script" id=13]
+[ext_resource path="res://packed/Caminho -1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://packed/Caminho 1.tscn" type="PackedScene" id=15]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "chao",
 "speed": 6.0
 } ]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=2]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1.87332, 1.36557, 0, 0, 0, 0, -61.8464, 222.839 )
 }
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=3]
 
 bake_interval = 5.0
 _data = {
@@ -41,7 +52,6 @@ _data = {
 
 [node name="Fundo2" type="ParallaxBackground" parent="." index="0"]
 
-editor/display_folded = true
 layer = -2
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -74,10 +84,10 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 [node name="montanhas" type="Sprite" parent="Fundo2/ParallaxLayer2" index="1"]
 
 texture = ExtResource( 2 )
-offset = Vector2( 64, 36 )
+offset = Vector2( 72, 36 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 400, 64 )
-_sections_unfolded = [ "Offset", "Region" ]
+region_rect = Rect2( 0, 0, 200, 64 )
+_sections_unfolded = [ "Offset", "Region", "Z Index" ]
 
 [node name="Fundo" type="ParallaxBackground" parent="." index="1"]
 
@@ -100,41 +110,53 @@ motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 
-[node name="arvores" type="Sprite" parent="Fundo/ParallaxLayer" index="0"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Fundo/ParallaxLayer" index="0"]
 
-texture = ExtResource( 3 )
-offset = Vector2( 64, 33 )
+position = Vector2( 65, 65 )
+z_index = 1
+frames = SubResource( 4 )
+animation = "default"
+frame = 1
+playing = true
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="arvores" type="Sprite" parent="Fundo/ParallaxLayer" index="1"]
+
+position = Vector2( 82.7441, -1.32038 )
+texture = ExtResource( 5 )
+offset = Vector2( -10, 33 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 400, 64 )
+region_rect = Rect2( 0, 0, 300, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="pista" type="AnimatedSprite" parent="." index="2"]
 
 light_mask = 0
-frames = ExtResource( 4 )
+frames = ExtResource( 6 )
 animation = "Movimento"
+frame = 1
 playing = true
 offset = Vector2( 72, 128 )
-script = ExtResource( 5 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="chao" type="AnimatedSprite" parent="." index="3"]
 
 light_mask = 0
 z_index = -1
-frames = SubResource( 3 )
+frames = SubResource( 1 )
 animation = "chao"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 72, 160 )
-script = ExtResource( 5 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="horizonte" type="Sprite" parent="." index="4"]
 
 visible = false
 z_index = -1
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 offset = Vector2( 64, 160 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 380, 192 )
@@ -142,12 +164,11 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="SpwnBck" type="Timer" parent="." index="5"]
 
-editor/display_folded = true
 process_mode = 1
 wait_time = 0.8
 one_shot = true
 autostart = true
-script = ExtResource( 11 )
+script = ExtResource( 13 )
 
 [node name="Caminhos" type="Node2D" parent="SpwnBck" index="0"]
 
@@ -161,16 +182,16 @@ __meta__ = {
 "_edit_vertical_guides_": [ -10.0352, 154.129 ]
 }
 
-[node name="Caminho -1" parent="SpwnBck/Caminhos" index="0" instance=ExtResource( 12 )]
+[node name="Caminho -1" parent="SpwnBck/Caminhos" index="0" instance=ExtResource( 14 )]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( -24, 64 )
-curve = SubResource( 1 )
+curve = SubResource( 2 )
 
-[node name="Caminho 1" parent="SpwnBck/Caminhos" index="1" instance=ExtResource( 13 )]
+[node name="Caminho 1" parent="SpwnBck/Caminhos" index="1" instance=ExtResource( 15 )]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 24, 64 )
-curve = SubResource( 2 )
+curve = SubResource( 3 )
 
 
