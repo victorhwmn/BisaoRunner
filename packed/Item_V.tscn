@@ -39,7 +39,7 @@ func hit_by_player():
 custom_solver_bias = 0.0
 extents = Vector2( 15.3306, 16.0448 )
 
-[node name="Item" type="RigidBody2D" index="0"]
+[node name="Item" type="RigidBody2D"]
 
 position = Vector2( 0, -16 )
 input_pickable = false
@@ -80,12 +80,11 @@ _sections_unfolded = [ "Transform" ]
 [node name="sfx" type="AudioStreamPlayer2D" parent="." index="2"]
 
 stream = ExtResource( 2 )
-volume_db = 0.0
-pitch_scale = 1.0
+volume_db = -8.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "BGM"
 area_mask = 1
 
 

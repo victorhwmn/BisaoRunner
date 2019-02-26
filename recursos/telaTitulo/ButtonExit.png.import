@@ -7,7 +7,10 @@ path="res://.import/ButtonExit.png-7df626e95a6916755da1226c0b812a04.stex"
 [deps]
 
 source_file="res://recursos/telaTitulo/ButtonExit.png"
+source_md5="ca476cce4d99ac3de3b9598bf1c15580"
+
 dest_files=[ "res://.import/ButtonExit.png-7df626e95a6916755da1226c0b812a04.stex" ]
+dest_md5="f100189d6722e8ad664afb79b1e7ce35"
 
 [params]
 

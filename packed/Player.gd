@@ -20,6 +20,9 @@ var deslocamento_y = Vector2(0,5)
 enum CAMINHO { CENTRAL , DIREITO , ESQUERDO};
 var caminhoAtual=CENTRAL;
 
+#Sinais do Player
+signal veneno_flag
+
 func _ready():
 	#Cria particulas invisíveis para deixar em cache e evitar travamentos
 	
@@ -155,6 +158,7 @@ func _on_body_enter(other):
 		get_node("../Distorcao").set_visible(true);
 		get_node("../Distorcao/Timer").start();
 		veneno=1;
+		emit_signal("veneno_flag")
 	
 	
 	elif(other.is_in_group("Item")):
