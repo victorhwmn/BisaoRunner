@@ -16,7 +16,7 @@
 [ext_resource path="res://packed/Caminho -1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://packed/Caminho 1.tscn" type="PackedScene" id=15]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
@@ -25,7 +25,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
@@ -34,14 +34,14 @@ animations = [ {
 "speed": 6.0
 } ]
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=3]
 
 bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1.87332, 1.36557, 0, 0, 0, 0, -61.8464, 222.839 )
 }
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=4]
 
 bake_interval = 5.0
 _data = {
@@ -112,16 +112,16 @@ motion_mirroring = Vector2( 0, 0 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Fundo/ParallaxLayer" index="0"]
 
-position = Vector2( 65, 65 )
+position = Vector2( 65, 64 )
 z_index = 1
-frames = SubResource( 4 )
+frames = SubResource( 1 )
 animation = "default"
 playing = true
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="arvores" type="Sprite" parent="Fundo/ParallaxLayer" index="1"]
 
-position = Vector2( 82.7441, -1.32038 )
+position = Vector2( 82.7441, 1.67962 )
 texture = ExtResource( 5 )
 offset = Vector2( -10, 33 )
 region_enabled = true
@@ -131,6 +131,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="pista" type="AnimatedSprite" parent="." index="2"]
 
 light_mask = 0
+position = Vector2( 0, 1.18549 )
 frames = ExtResource( 6 )
 animation = "Movimento"
 frame = 2
@@ -142,10 +143,10 @@ _sections_unfolded = [ "Material", "Visibility" ]
 [node name="chao" type="AnimatedSprite" parent="." index="3"]
 
 light_mask = 0
+position = Vector2( 0, 1 )
 z_index = -1
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "chao"
-frame = 3
 playing = true
 offset = Vector2( 72, 160 )
 script = ExtResource( 7 )
@@ -185,12 +186,12 @@ __meta__ = {
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( -24, 64 )
-curve = SubResource( 2 )
+curve = SubResource( 3 )
 
 [node name="Caminho 1" parent="SpwnBck/Caminhos" index="1" instance=ExtResource( 15 )]
 
 self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 position = Vector2( 24, 64 )
-curve = SubResource( 3 )
+curve = SubResource( 4 )
 
 

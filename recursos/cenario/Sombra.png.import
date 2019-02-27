@@ -7,10 +7,7 @@ path="res://.import/Sombra.png-2d3d39ce6f26daa4663d1dae48938a98.stex"
 [deps]
 
 source_file="res://recursos/cenario/Sombra.png"
-source_md5="c3759494d3f290cc5fc17432c289724a"
-
 dest_files=[ "res://.import/Sombra.png-2d3d39ce6f26daa4663d1dae48938a98.stex" ]
-dest_md5="36242b5e88fa02056f05aea52be1859a"
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/montes.png-5e7dd629b0340ca5a860cc0171967e79.stex"
+path="res://.import/t2.png-c7359afd44b9fba594fc57eb8c72d57e.stex"
 
 [deps]
 
-source_file="res://recursos/cenario/montes.png"
-dest_files=[ "res://.import/montes.png-5e7dd629b0340ca5a860cc0171967e79.stex" ]
+source_file="res://recursos/trilhas/t2.png"
+dest_files=[ "res://.import/t2.png-c7359afd44b9fba594fc57eb8c72d57e.stex" ]
 
 [params]
 
@@ -15,8 +15,8 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=false
+flags/repeat=0
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
