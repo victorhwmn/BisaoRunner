@@ -7,7 +7,10 @@ path="res://.import/monte1.png-1040c92abf0297aa2093e08f15cba8fd.stex"
 [deps]
 
 source_file="res://recursos/cenario/monte1.png"
+source_md5="5785f3fbf39527bfb1247ad737c8efe0"
+
 dest_files=[ "res://.import/monte1.png-1040c92abf0297aa2093e08f15cba8fd.stex" ]
+dest_md5="6f6ac711c9459762cd78aea9e38ad5a0"
 
 [params]
 

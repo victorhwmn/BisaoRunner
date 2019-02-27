@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://cenas/mainGame.gd" type="Script" id=1]
 [ext_resource path="res://packed/pause.tscn" type="PackedScene" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://packed/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://packed/Spawner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://packed/Caminhos.tscn" type="PackedScene" id=7]
-[ext_resource path="res://recursos/musicas/Bateria_BR_v2.ogg" type="AudioStream" id=8]
+[ext_resource path="res://recursos/musicas/Bateria_BR.ogg" type="AudioStream" id=8]
 [ext_resource path="res://cenas/music.gd" type="Script" id=9]
+[ext_resource path="res://recursos/musicas/Bateria_BR_Veneno.ogg" type="AudioStream" id=10]
 
 [sub_resource type="GDScript" id=1]
 
@@ -37,7 +38,7 @@ func _on_Timer_timeout():
 "
 _sections_unfolded = [ "Resource" ]
 
-[node name="mainGame" type="Node2D"]
+[node name="mainGame" type="Node2D" index="0"]
 
 pause_mode = 1
 script = ExtResource( 1 )
@@ -45,6 +46,8 @@ _sections_unfolded = [ "Pause", "Transform" ]
 __meta__ = {
 "_edit_horizontal_guides_": [ 0.284847, -23.4013 ]
 }
+transition_duration = 0.1
+transition_type = 1
 
 [node name="Pause" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -157,18 +160,39 @@ _sections_unfolded = [ "Rect" ]
 process_mode = 1
 wait_time = 5.0
 one_shot = true
-autostart = true
+autostart = false
 
-[node name="music" type="AudioStreamPlayer" parent="." index="6"]
+[node name="Tween" type="Tween" parent="." index="6"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="music" type="AudioStreamPlayer" parent="." index="7"]
 
 stream = ExtResource( 8 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
-bus = "BGM"
+bus = "Master"
 script = ExtResource( 9 )
 
+[node name="music_veneno" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 10 )
+volume_db = -80.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[connection signal="veneno_flag" from="Player" to="." method="_on_Player_veneno_flag"]
+
 [connection signal="timeout" from="Distorcao/Timer" to="Distorcao" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Distorcao/Timer" to="." method="_on_Timer_timeout"]
 
 

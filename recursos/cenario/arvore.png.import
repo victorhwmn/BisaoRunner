@@ -7,7 +7,10 @@ path="res://.import/arvore.png-5abf544d00298a6ee8cc796e62d7b52d.stex"
 [deps]
 
 source_file="res://recursos/cenario/arvore.png"
+source_md5="3ef38ce3c62fa704b99e345239922135"
+
 dest_files=[ "res://.import/arvore.png-5abf544d00298a6ee8cc796e62d7b52d.stex" ]
+dest_md5="fd1e5dd2efefced644ce29871a2d325c"
 
 [params]
 

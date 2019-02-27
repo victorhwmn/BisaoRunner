@@ -7,7 +7,10 @@ path="res://.import/fundoArvores.png-2e9feea40dd055749a5b0c81c8205d2c.stex"
 [deps]
 
 source_file="res://recursos/cenario/fundoArvores.png"
+source_md5="f3478f22086cc1377115e86025d679ac"
+
 dest_files=[ "res://.import/fundoArvores.png-2e9feea40dd055749a5b0c81c8205d2c.stex" ]
+dest_md5="bf510f59b1442b8b4a5cca37a5738c5d"
 
 [params]
 

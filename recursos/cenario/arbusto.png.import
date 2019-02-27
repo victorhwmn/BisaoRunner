@@ -7,7 +7,10 @@ path="res://.import/arbusto.png-273374e49d04653d30809f043db194fb.stex"
 [deps]
 
 source_file="res://recursos/cenario/arbusto.png"
+source_md5="7357f633900d76fe59174085c2a6e93c"
+
 dest_files=[ "res://.import/arbusto.png-273374e49d04653d30809f043db194fb.stex" ]
+dest_md5="724961b5b2cb7ca61ef5b40490f64bff"
 
 [params]
 

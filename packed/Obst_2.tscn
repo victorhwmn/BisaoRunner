@@ -19,7 +19,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Obstaculo" type="RigidBody2D" index="0"]
+[node name="Obstaculo" type="RigidBody2D"]
 
 position = Vector2( 0, -16 )
 input_pickable = false
@@ -61,8 +61,7 @@ texture = ExtResource( 2 )
 [node name="sfx" type="AudioStreamPlayer2D" parent="." index="2"]
 
 stream = ExtResource( 3 )
-volume_db = 0.0
-pitch_scale = 1.0
+volume_db = -4.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
@@ -73,6 +72,7 @@ area_mask = 1
 
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 
 
