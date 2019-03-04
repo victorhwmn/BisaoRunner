@@ -7,10 +7,7 @@ path="res://.import/trilha4.png-c15496d97df93150c101b71fff2cabfe.stex"
 [deps]
 
 source_file="res://recursos/trilhas/trilha4.png"
-source_md5="ad1ba39f00b83e0f47621ce3691f2091"
-
 dest_files=[ "res://.import/trilha4.png-c15496d97df93150c101b71fff2cabfe.stex" ]
-dest_md5="7a12917a02ff394bbdf2110d6f13f365"
 
 [params]
 
@@ -19,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

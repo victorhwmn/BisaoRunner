@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cafe.png-d40d8a0677557058149b6d0d944299b0.stex"
+path="res://.import/RuT2.png-cf9706ce6b8e659a557393b98b3fe182.stex"
 
 [deps]
 
-source_file="res://recursos/items/cafe.png"
-dest_files=[ "res://.import/cafe.png-d40d8a0677557058149b6d0d944299b0.stex" ]
+source_file="res://recursos/items/RuT2.png"
+dest_files=[ "res://.import/RuT2.png-cf9706ce6b8e659a557393b98b3fe182.stex" ]
 
 [params]
 
